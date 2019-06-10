@@ -130,3 +130,11 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+/**
+ * Hide Admin Menu Pages
+ */
+add_action('admin_menu', function() {
+    // Hide Posts
+    remove_menu_page('edit.php');
+});
