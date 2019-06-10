@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "536ccea6d2c8369395d8e4e4ceb39b67",
+    "content-hash": "8547eee890e9db8f93ca6943c3fc7058",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -403,6 +403,49 @@
                 "url"
             ],
             "time": "2018-12-04T20:46:45+00:00"
+        },
+        {
+            "name": "nekojira/wp-api-menus",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unfulvio/wp-api-menus.git",
+                "reference": "88fc518d66a531916cf141ec45f1e58bc4ec3ae7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/unfulvio/wp-api-menus/zipball/88fc518d66a531916cf141ec45f1e58bc4ec3ae7",
+                "reference": "88fc518d66a531916cf141ec45f1e58bc4ec3ae7",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.3.2"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Fulvio Notarstefano",
+                    "email": "fulvio.notarstefano@gmail.com",
+                    "homepage": "https://github.com/unfulvio",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Extends WordPress WP API with menu routes.",
+            "homepage": "https://github.com/unfulvio/wp-api-menus",
+            "keywords": [
+                "api",
+                "json",
+                "wordpress",
+                "wp",
+                "wp-api",
+                "wp-rest-api"
+            ],
+            "time": "2016-10-03T15:55:23+00:00"
         },
         {
             "name": "oscarotero/env",
