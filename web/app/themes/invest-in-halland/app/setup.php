@@ -140,6 +140,21 @@ add_action('admin_menu', function() {
 });
 
 /**
+ * ACF auto import and export fields
+ */
+add_action('init', function() {
+    if (class_exists('AcfExportManager\AcfExportManager')) {
+        $acfExportManager = new \AcfExportManager\AcfExportManager();
+        $acfExportManager->setTextdomain('investinhalland');
+        $acfExportManager->setExportFolder(__DIR__ . '/acf');
+        $acfExportManager->autoExport(array(
+            // 'label_here' => 'group_id_here',
+        ));
+        $acfExportManager->import();
+    }
+});
+
+/**
  * Custom Post Type: Article
  */
 add_action('init', function() {
