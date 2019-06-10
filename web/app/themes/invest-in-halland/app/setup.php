@@ -132,7 +132,7 @@ add_action('after_setup_theme', function () {
 });
 
 /**
- * Hide Admin Menu Pages
+ * Hide admin menu pages
  */
 add_action('admin_menu', function() {
     // Hide Posts
@@ -140,7 +140,7 @@ add_action('admin_menu', function() {
 });
 
 /**
- * ACF auto import and export fields
+ * ACF: Auto import/export fields
  */
 add_action('init', function() {
     if (class_exists('AcfExportManager\AcfExportManager')) {
@@ -148,11 +148,31 @@ add_action('init', function() {
         $acfExportManager->setTextdomain('investinhalland');
         $acfExportManager->setExportFolder(__DIR__ . '/acf');
         $acfExportManager->autoExport(array(
-            // 'label_here' => 'group_id_here',
+            'questions' => 'group_5cfe66f4e3ea8',
         ));
         $acfExportManager->import();
     }
 });
+
+/**
+ * ACF: Add options page
+ */
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'page_title'    => 'Innehåll',
+        'menu_title'    => 'Innehåll',
+        'menu_slug'     => 'theme-general',
+        'position'      => 20,
+        'capability'    => 'edit_posts',
+        'redirect'      => true
+    ));
+    
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Utvalda frågor',
+        'menu_title'    => 'Utvalda frågor',
+        'parent_slug'   => 'theme-general',
+    )); 
+}
 
 /**
  * Custom Post Type: Article

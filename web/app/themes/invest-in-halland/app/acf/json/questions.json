@@ -1,0 +1,51 @@
+[{
+    "key": "group_5cfe66f4e3ea8",
+    "title": "Fr\u00e5gor",
+    "fields": [
+        {
+            "key": "field_5cfe66fee482e",
+            "label": "Utvalda fr\u00e5gor",
+            "name": "featured_questions",
+            "type": "relationship",
+            "instructions": "V\u00e4lj ett antal utvalda fr\u00e5gor. Minst 1 och max 10 stycken.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "question"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": 1,
+            "max": 10,
+            "return_format": "object"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-utvalda-fragor"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Information kopplat till Fr\u00e5gor och Svar"
+}]
+
