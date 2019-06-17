@@ -135,8 +135,9 @@ add_action('after_setup_theme', function () {
  * Hide admin menu pages
  */
 add_action('admin_menu', function() {
-    // Hide Posts
-    remove_menu_page('edit.php');
+    remove_menu_page( 'edit.php' ); // Hide Posts
+    remove_menu_page( 'edit.php?post_type=page' ); // Hide Pages
+    remove_menu_page( 'edit-comments.php' ); // Hide Comments
 });
 
 /**
@@ -149,6 +150,7 @@ add_action('init', function() {
         $acfExportManager->setExportFolder(__DIR__ . '/acf');
         $acfExportManager->autoExport(array(
             'questions' => 'group_5cfe66f4e3ea8',
+            'footer' => 'group_5d0774abdb08a',
         ));
         $acfExportManager->import();
     }
@@ -170,6 +172,12 @@ if (function_exists('acf_add_options_page')) {
     acf_add_options_sub_page(array(
         'page_title'    => 'Utvalda frågor',
         'menu_title'    => 'Utvalda frågor',
+        'parent_slug'   => 'theme-general',
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Sidfot',
+        'menu_title'    => 'Sidfot',
         'parent_slug'   => 'theme-general',
     )); 
 }
