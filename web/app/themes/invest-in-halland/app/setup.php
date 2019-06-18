@@ -231,14 +231,14 @@ add_action('init', function() {
 }, 0);
 
 /**
- * Custom Post Type: Frågor
+ * Custom Post Type: Statistic
  */
 add_action('init', function() {
     $labels = array(
-        'name'                  => _x( 'Frågor', 'Post Type General Name', 'investinhalland' ),
-        'singular_name'         => _x( 'Fråga', 'Post Type Singular Name', 'investinhalland' ),
-        'menu_name'             => __( 'Frågor', 'investinhalland' ),
-        'name_admin_bar'        => __( 'Frågor', 'investinhalland' ),
+        'name'                  => _x( 'Statistik', 'Post Type General Name', 'investinhalland' ),
+        'singular_name'         => _x( 'Statistik', 'Post Type Singular Name', 'investinhalland' ),
+        'menu_name'             => __( 'Statistik', 'investinhalland' ),
+        'name_admin_bar'        => __( 'Statistik', 'investinhalland' ),
         'parent_item_colon'     => __( 'Parent Item:', 'investinhalland' ),
         'search_items'          => __( 'Search Item', 'investinhalland' ),
         'items_list'            => __( 'Items list', 'investinhalland' ),
@@ -247,15 +247,15 @@ add_action('init', function() {
     );
 
     $rewrite = array(
-        'slug'                  => 'fragor',
+        'slug'                  => 'statistik',
         'with_front'            => true,
         'pages'                 => true,
         'feeds'                 => true,
     );
     
     $args = array(
-        'label'                 => __( 'Question', 'investinhalland' ),
-        'description'           => __( 'Questions', 'investinhalland' ),
+        'label'                 => __( 'Statistic', 'investinhalland' ),
+        'description'           => __( 'Statistics', 'investinhalland' ),
         'labels'                => $labels,
         'supports'              => array( 'title', 'editor', 'thumbnail', 'author' ),
         'hierarchical'          => false,
@@ -275,7 +275,7 @@ add_action('init', function() {
         'rewrite'               => $rewrite,
     );
     
-    register_post_type( 'question', $args );
+    register_post_type( 'statistic', $args );
 }, 0);
 
 /**
