@@ -159,55 +159,99 @@ add_action('init', function() {
 /**
  * ACF: Add options page
  */
-if (function_exists('acf_add_options_page')) {
-    acf_add_options_page(array(
-        'page_title'    => 'Innehåll',
-        'menu_title'    => 'Innehåll',
-        'menu_slug'     => 'theme-general',
-        'position'      => 20,
-        'capability'    => 'edit_posts',
-        'redirect'      => true
-    ));
+// if (function_exists('acf_add_options_page')) {
+//     acf_add_options_page(array(
+//         'page_title'    => 'Innehåll',
+//         'menu_title'    => 'Innehåll',
+//         'menu_slug'     => 'theme-general',
+//         'position'      => 20,
+//         'capability'    => 'edit_posts',
+//         'redirect'      => true
+//     ));
     
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Utvalda frågor',
-        'menu_title'    => 'Utvalda frågor',
-        'parent_slug'   => 'theme-general',
-    ));
+//     acf_add_options_sub_page(array(
+//         'page_title'    => 'Utvalda frågor',
+//         'menu_title'    => 'Utvalda frågor',
+//         'parent_slug'   => 'theme-general',
+//     ));
 
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Sidfot',
-        'menu_title'    => 'Sidfot',
-        'parent_slug'   => 'theme-general',
-    )); 
-}
+//     acf_add_options_sub_page(array(
+//         'page_title'    => 'Sidfot',
+//         'menu_title'    => 'Sidfot',
+//         'parent_slug'   => 'theme-general',
+//     )); 
+// }
+
+// /**
+//  * Custom Post Type: Article
+//  */
+// add_action('init', function() {
+//     $labels = array(
+//         'name'                  => _x( 'Artiklar', 'Post Type General Name', 'investinhalland' ),
+//         'singular_name'         => _x( 'Artikel', 'Post Type Singular Name', 'investinhalland' ),
+//         'menu_name'             => __( 'Artiklar', 'investinhalland' ),
+//         'name_admin_bar'        => __( 'Artiklar', 'investinhalland' ),
+//         'parent_item_colon'     => __( 'Parent Item:', 'investinhalland' ),
+//         'search_items'          => __( 'Search Item', 'investinhalland' ),
+//         'items_list'            => __( 'Items list', 'investinhalland' ),
+//         'items_list_navigation' => __( 'Items list navigation', 'investinhalland' ),
+//         'filter_items_list'     => __( 'Filter items list', 'investinhalland' ),
+//     );
+
+//     $rewrite = array(
+//         'slug'                  => 'artiklar',
+//         'with_front'            => true,
+//         'pages'                 => true,
+//         'feeds'                 => true,
+//     );
+    
+//     $args = array(
+//         'label'                 => __( 'Article', 'investinhalland' ),
+//         'description'           => __( 'Articles', 'investinhalland' ),
+//         'labels'                => $labels,
+//         'supports'              => array( 'title', 'editor', 'thumbnail', 'author' ),
+//         'hierarchical'          => false,
+//         'public'                => true,
+//         'show_ui'               => true,
+//         'show_in_menu'          => true,
+//         'menu_icon'             => 'dashicons-format-quote',
+//         'menu_position'         => 5,
+//         'show_in_admin_bar'     => true,
+//         'show_in_nav_menus'     => true,
+//         'can_export'            => true,
+//         'has_archive'           => true,
+//         'exclude_from_search'   => false,
+//         'publicly_queryable'    => true,
+//         'capability_type'       => 'page',
+//         'show_in_rest'          => true,
+//         'rewrite'               => $rewrite,
+//     );
+    
+//     register_post_type( 'article', $args );
+// }, 0);
+
 
 /**
- * Custom Post Type: Article
+ * Custom Post Type: company_story
  */
 add_action('init', function() {
     $labels = array(
-        'name'                  => _x( 'Artiklar', 'Post Type General Name', 'investinhalland' ),
-        'singular_name'         => _x( 'Artikel', 'Post Type Singular Name', 'investinhalland' ),
-        'menu_name'             => __( 'Artiklar', 'investinhalland' ),
-        'name_admin_bar'        => __( 'Artiklar', 'investinhalland' ),
-        'parent_item_colon'     => __( 'Parent Item:', 'investinhalland' ),
-        'search_items'          => __( 'Search Item', 'investinhalland' ),
-        'items_list'            => __( 'Items list', 'investinhalland' ),
-        'items_list_navigation' => __( 'Items list navigation', 'investinhalland' ),
-        'filter_items_list'     => __( 'Filter items list', 'investinhalland' ),
+        'name'                  => _x( 'Företagare berättar', 'Post Type General Name', 'investinhalland' ),
+        'singular_name'         => _x( 'Företagare berättar', 'Post Type Singular Name', 'investinhalland' ),
+        'menu_name'             => __( 'Företagare berättar', 'investinhalland' ),
+        'name_admin_bar'        => __( 'Företagare berättar', 'investinhalland' )
     );
 
     $rewrite = array(
-        'slug'                  => 'artiklar',
+        'slug'                  => 'company_stories',
         'with_front'            => true,
         'pages'                 => true,
         'feeds'                 => true,
     );
     
     $args = array(
-        'label'                 => __( 'Article', 'investinhalland' ),
-        'description'           => __( 'Articles', 'investinhalland' ),
+        'label'                 => __( 'Företagare berättar', 'investinhalland' ),
+        'description'           => __( 'Företagare berättar', 'investinhalland' ),
         'labels'                => $labels,
         'supports'              => array( 'title', 'editor', 'thumbnail', 'author' ),
         'hierarchical'          => false,
@@ -215,7 +259,7 @@ add_action('init', function() {
         'show_ui'               => true,
         'show_in_menu'          => true,
         'menu_icon'             => 'dashicons-format-quote',
-        'menu_position'         => 5,
+        'menu_position'         => 10,
         'show_in_admin_bar'     => true,
         'show_in_nav_menus'     => true,
         'can_export'            => true,
@@ -227,35 +271,73 @@ add_action('init', function() {
         'rewrite'               => $rewrite,
     );
     
-    register_post_type( 'article', $args );
+    register_post_type( 'company_story', $args );
 }, 0);
 
 /**
- * Custom Post Type: Statistic
- */
+    * Custom Post Type: Facts
+*/
 add_action('init', function() {
     $labels = array(
-        'name'                  => _x( 'Statistik', 'Post Type General Name', 'investinhalland' ),
-        'singular_name'         => _x( 'Statistik', 'Post Type Singular Name', 'investinhalland' ),
-        'menu_name'             => __( 'Statistik', 'investinhalland' ),
-        'name_admin_bar'        => __( 'Statistik', 'investinhalland' ),
-        'parent_item_colon'     => __( 'Parent Item:', 'investinhalland' ),
-        'search_items'          => __( 'Search Item', 'investinhalland' ),
-        'items_list'            => __( 'Items list', 'investinhalland' ),
-        'items_list_navigation' => __( 'Items list navigation', 'investinhalland' ),
-        'filter_items_list'     => __( 'Filter items list', 'investinhalland' ),
+        'name'                  => _x( 'Möjligheter', 'Post Type General Name', 'investinhalland' ),
+        'singular_name'         => _x( 'Möjlighet', 'Post Type Singular Name', 'investinhalland' ),
+        'menu_name'             => __( 'Möjligheter', 'investinhalland' ),
+        'name_admin_bar'        => __( 'Möjligheter', 'investinhalland' ),
     );
 
     $rewrite = array(
-        'slug'                  => 'statistik',
+        'slug'                  => 'opportunity',
         'with_front'            => true,
         'pages'                 => true,
         'feeds'                 => true,
     );
     
     $args = array(
-        'label'                 => __( 'Statistic', 'investinhalland' ),
-        'description'           => __( 'Statistics', 'investinhalland' ),
+        'label'                 => __( 'Möjligheter', 'investinhalland' ),
+        'description'           => __( 'Möjligheter', 'investinhalland' ),
+        'labels'                => $labels,
+        'supports'              => array( 'title', 'editor', 'thumbnail', 'author' ),
+        'hierarchical'          => false,
+        'public'                => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'menu_icon'             => 'dashicons-lightbulb',
+        'menu_position'         => 11,
+        'show_in_admin_bar'     => true,
+        'show_in_nav_menus'     => true,
+        'can_export'            => true,
+        'has_archive'           => true,
+        'exclude_from_search'   => false,
+        'publicly_queryable'    => true,
+        'capability_type'       => 'page',
+        'show_in_rest'          => true,
+        'rewrite'               => $rewrite,
+    );
+    
+    register_post_type( 'opportunity', $args );
+}, 0);
+
+/**
+    * Custom Post Type: Facts
+*/
+add_action('init', function() {
+    $labels = array(
+        'name'                  => _x( 'Fakta', 'Post Type General Name', 'investinhalland' ),
+        'singular_name'         => _x( 'Fakta', 'Post Type Singular Name', 'investinhalland' ),
+        'menu_name'             => __( 'Fakta', 'investinhalland' ),
+        'name_admin_bar'        => __( 'Fakta', 'investinhalland' ),
+    );
+
+    $rewrite = array(
+        'slug'                  => 'fact',
+        'with_front'            => true,
+        'pages'                 => true,
+        'feeds'                 => true,
+    );
+    
+    $args = array(
+        'label'                 => __( 'Fakta', 'investinhalland' ),
+        'description'           => __( 'Fakta', 'investinhalland' ),
         'labels'                => $labels,
         'supports'              => array( 'title', 'editor', 'thumbnail', 'author' ),
         'hierarchical'          => false,
@@ -263,7 +345,7 @@ add_action('init', function() {
         'show_ui'               => true,
         'show_in_menu'          => true,
         'menu_icon'             => 'dashicons-chart-bar',
-        'menu_position'         => 5,
+        'menu_position'         => 12,
         'show_in_admin_bar'     => true,
         'show_in_nav_menus'     => true,
         'can_export'            => true,
@@ -275,54 +357,103 @@ add_action('init', function() {
         'rewrite'               => $rewrite,
     );
     
-    register_post_type( 'statistic', $args );
+    register_post_type( 'fact', $args );
 }, 0);
 
-/**
- * Custom Post Type: Nyheter
- */
-add_action('init', function() {
-    $labels = array(
-        'name'                  => _x( 'Nyheter', 'Post Type General Name', 'investinhalland' ),
-        'singular_name'         => _x( 'Nyhet', 'Post Type Singular Name', 'investinhalland' ),
-        'menu_name'             => __( 'Nyheter', 'investinhalland' ),
-        'name_admin_bar'        => __( 'Nyheter', 'investinhalland' ),
-        'parent_item_colon'     => __( 'Parent Item:', 'investinhalland' ),
-        'search_items'          => __( 'Search Item', 'investinhalland' ),
-        'items_list'            => __( 'Items list', 'investinhalland' ),
-        'items_list_navigation' => __( 'Items list navigation', 'investinhalland' ),
-        'filter_items_list'     => __( 'Filter items list', 'investinhalland' ),
-    );
-    $rewrite = array(
-        'slug'                  => 'nyheter',
-        'with_front'            => true,
-        'pages'                 => true,
-        'feeds'                 => true,
-    );
+
+// /**
+//  * Custom Post Type: Facts
+//  */
+// add_action('init', function() {
+//     $labels = array(
+//         'name'                  => _x( 'Statistik', 'Post Type General Name', 'investinhalland' ),
+//         'singular_name'         => _x( 'Statistik', 'Post Type Singular Name', 'investinhalland' ),
+//         'menu_name'             => __( 'Statistik', 'investinhalland' ),
+//         'name_admin_bar'        => __( 'Statistik', 'investinhalland' ),
+//         'parent_item_colon'     => __( 'Parent Item:', 'investinhalland' ),
+//         'search_items'          => __( 'Search Item', 'investinhalland' ),
+//         'items_list'            => __( 'Items list', 'investinhalland' ),
+//         'items_list_navigation' => __( 'Items list navigation', 'investinhalland' ),
+//         'filter_items_list'     => __( 'Filter items list', 'investinhalland' ),
+//     );
+
+//     $rewrite = array(
+//         'slug'                  => 'statistik',
+//         'with_front'            => true,
+//         'pages'                 => true,
+//         'feeds'                 => true,
+//     );
     
-    $args = array(
-        'label'                 => __( 'News', 'investinhalland' ),
-        'description'           => __( 'News', 'investinhalland' ),
-        'labels'                => $labels,
-        'supports'              => array( 'title', 'editor', 'thumbnail', 'author'),
-        'taxonomies'            => array( 'area' ),
-        'hierarchical'          => false,
-        'public'                => true,
-        'show_ui'               => true,
-        'show_in_menu'          => true,
-        'menu_icon'             => 'dashicons-rss',
-        'menu_position'         => 5,
-        'show_in_admin_bar'     => true,
-        'show_in_nav_menus'     => true,
-        'show_in_nav_rest'      => true,
-        'can_export'            => true,
-        'has_archive'           => true,
-        'exclude_from_search'   => false,
-        'publicly_queryable'    => true,
-        'capability_type'       => 'page',
-        'show_in_rest'          => true,
-        'rewrite'               => $rewrite
-    );
+//     $args = array(
+//         'label'                 => __( 'Statistic', 'investinhalland' ),
+//         'description'           => __( 'Statistics', 'investinhalland' ),
+//         'labels'                => $labels,
+//         'supports'              => array( 'title', 'editor', 'thumbnail', 'author' ),
+//         'hierarchical'          => false,
+//         'public'                => true,
+//         'show_ui'               => true,
+//         'show_in_menu'          => true,
+//         'menu_icon'             => 'dashicons-chart-bar',
+//         'menu_position'         => 5,
+//         'show_in_admin_bar'     => true,
+//         'show_in_nav_menus'     => true,
+//         'can_export'            => true,
+//         'has_archive'           => true,
+//         'exclude_from_search'   => false,
+//         'publicly_queryable'    => true,
+//         'capability_type'       => 'page',
+//         'show_in_rest'          => true,
+//         'rewrite'               => $rewrite,
+//     );
     
-    register_post_type( 'news', $args );
-}, 0);
+//     register_post_type( 'statistic', $args );
+// }, 0);
+
+// /**
+//  * Custom Post Type: Nyheter
+//  */
+// add_action('init', function() {
+//     $labels = array(
+//         'name'                  => _x( 'Nyheter', 'Post Type General Name', 'investinhalland' ),
+//         'singular_name'         => _x( 'Nyhet', 'Post Type Singular Name', 'investinhalland' ),
+//         'menu_name'             => __( 'Nyheter', 'investinhalland' ),
+//         'name_admin_bar'        => __( 'Nyheter', 'investinhalland' ),
+//         'parent_item_colon'     => __( 'Parent Item:', 'investinhalland' ),
+//         'search_items'          => __( 'Search Item', 'investinhalland' ),
+//         'items_list'            => __( 'Items list', 'investinhalland' ),
+//         'items_list_navigation' => __( 'Items list navigation', 'investinhalland' ),
+//         'filter_items_list'     => __( 'Filter items list', 'investinhalland' ),
+//     );
+//     $rewrite = array(
+//         'slug'                  => 'nyheter',
+//         'with_front'            => true,
+//         'pages'                 => true,
+//         'feeds'                 => true,
+//     );
+    
+//     $args = array(
+//         'label'                 => __( 'News', 'investinhalland' ),
+//         'description'           => __( 'News', 'investinhalland' ),
+//         'labels'                => $labels,
+//         'supports'              => array( 'title', 'editor', 'thumbnail', 'author'),
+//         'taxonomies'            => array( 'area' ),
+//         'hierarchical'          => false,
+//         'public'                => true,
+//         'show_ui'               => true,
+//         'show_in_menu'          => true,
+//         'menu_icon'             => 'dashicons-rss',
+//         'menu_position'         => 13,
+//         'show_in_admin_bar'     => true,
+//         'show_in_nav_menus'     => true,
+//         'show_in_nav_rest'      => true,
+//         'can_export'            => true,
+//         'has_archive'           => true,
+//         'exclude_from_search'   => false,
+//         'publicly_queryable'    => true,
+//         'capability_type'       => 'page',
+//         'show_in_rest'          => true,
+//         'rewrite'               => $rewrite
+//     );
+    
+//     register_post_type( 'news', $args );
+// }, 0);
