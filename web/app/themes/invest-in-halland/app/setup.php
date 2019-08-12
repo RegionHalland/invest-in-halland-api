@@ -179,6 +179,7 @@ add_action('init', function() {
         'description'           => __( 'Företagare berättar', 'investinhalland' ),
         'labels'                => $labels,
         'supports'              => array( 'title', 'editor', 'thumbnail', 'author' ),
+        'taxonomies'            => array( 'area' ),
         'hierarchical'          => false,
         'public'                => true,
         'show_ui'               => true,
@@ -284,6 +285,28 @@ add_action('init', function() {
     
     register_post_type( 'fact', $args );
 }, 0);
+
+// Register Custom Taxonomy Area
+add_action('init', function () {
+
+	$labels = array(
+		'name'                       => _x( 'Områden', 'Taxonomy General Name', 'investinhalland' ),
+		'singular_name'              => _x( 'Område', 'Taxonomy Singular Name', 'investinhalland' ),
+		'menu_name'                  => __( 'Områden', 'investinhalland' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+        'show_in_rest'              => true,
+	);
+	register_taxonomy( 'area', array( 'company_story', 'opportunity', 'fact' ), $args );
+
+}, 0 );
 
 
 
