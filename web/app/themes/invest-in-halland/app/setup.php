@@ -157,81 +157,6 @@ add_action('init', function() {
 });
 
 /**
- * ACF: Add options page
- */
-// if (function_exists('acf_add_options_page')) {
-//     acf_add_options_page(array(
-//         'page_title'    => 'Innehåll',
-//         'menu_title'    => 'Innehåll',
-//         'menu_slug'     => 'theme-general',
-//         'position'      => 20,
-//         'capability'    => 'edit_posts',
-//         'redirect'      => true
-//     ));
-    
-//     acf_add_options_sub_page(array(
-//         'page_title'    => 'Utvalda frågor',
-//         'menu_title'    => 'Utvalda frågor',
-//         'parent_slug'   => 'theme-general',
-//     ));
-
-//     acf_add_options_sub_page(array(
-//         'page_title'    => 'Sidfot',
-//         'menu_title'    => 'Sidfot',
-//         'parent_slug'   => 'theme-general',
-//     )); 
-// }
-
-// /**
-//  * Custom Post Type: Article
-//  */
-// add_action('init', function() {
-//     $labels = array(
-//         'name'                  => _x( 'Artiklar', 'Post Type General Name', 'investinhalland' ),
-//         'singular_name'         => _x( 'Artikel', 'Post Type Singular Name', 'investinhalland' ),
-//         'menu_name'             => __( 'Artiklar', 'investinhalland' ),
-//         'name_admin_bar'        => __( 'Artiklar', 'investinhalland' ),
-//         'parent_item_colon'     => __( 'Parent Item:', 'investinhalland' ),
-//         'search_items'          => __( 'Search Item', 'investinhalland' ),
-//         'items_list'            => __( 'Items list', 'investinhalland' ),
-//         'items_list_navigation' => __( 'Items list navigation', 'investinhalland' ),
-//         'filter_items_list'     => __( 'Filter items list', 'investinhalland' ),
-//     );
-
-//     $rewrite = array(
-//         'slug'                  => 'artiklar',
-//         'with_front'            => true,
-//         'pages'                 => true,
-//         'feeds'                 => true,
-//     );
-    
-//     $args = array(
-//         'label'                 => __( 'Article', 'investinhalland' ),
-//         'description'           => __( 'Articles', 'investinhalland' ),
-//         'labels'                => $labels,
-//         'supports'              => array( 'title', 'editor', 'thumbnail', 'author' ),
-//         'hierarchical'          => false,
-//         'public'                => true,
-//         'show_ui'               => true,
-//         'show_in_menu'          => true,
-//         'menu_icon'             => 'dashicons-format-quote',
-//         'menu_position'         => 5,
-//         'show_in_admin_bar'     => true,
-//         'show_in_nav_menus'     => true,
-//         'can_export'            => true,
-//         'has_archive'           => true,
-//         'exclude_from_search'   => false,
-//         'publicly_queryable'    => true,
-//         'capability_type'       => 'page',
-//         'show_in_rest'          => true,
-//         'rewrite'               => $rewrite,
-//     );
-    
-//     register_post_type( 'article', $args );
-// }, 0);
-
-
-/**
  * Custom Post Type: company_story
  */
 add_action('init', function() {
@@ -243,7 +168,7 @@ add_action('init', function() {
     );
 
     $rewrite = array(
-        'slug'                  => 'company_stories',
+        'slug'                  => 'foretagare-berattar',
         'with_front'            => true,
         'pages'                 => true,
         'feeds'                 => true,
@@ -275,7 +200,7 @@ add_action('init', function() {
 }, 0);
 
 /**
-    * Custom Post Type: Facts
+    * Custom Post Type: Opportunity
 */
 add_action('init', function() {
     $labels = array(
@@ -286,7 +211,7 @@ add_action('init', function() {
     );
 
     $rewrite = array(
-        'slug'                  => 'opportunity',
+        'slug'                  => 'mojligheter-i-halland',
         'with_front'            => true,
         'pages'                 => true,
         'feeds'                 => true,
@@ -361,99 +286,63 @@ add_action('init', function() {
 }, 0);
 
 
-// /**
-//  * Custom Post Type: Facts
-//  */
-// add_action('init', function() {
-//     $labels = array(
-//         'name'                  => _x( 'Statistik', 'Post Type General Name', 'investinhalland' ),
-//         'singular_name'         => _x( 'Statistik', 'Post Type Singular Name', 'investinhalland' ),
-//         'menu_name'             => __( 'Statistik', 'investinhalland' ),
-//         'name_admin_bar'        => __( 'Statistik', 'investinhalland' ),
-//         'parent_item_colon'     => __( 'Parent Item:', 'investinhalland' ),
-//         'search_items'          => __( 'Search Item', 'investinhalland' ),
-//         'items_list'            => __( 'Items list', 'investinhalland' ),
-//         'items_list_navigation' => __( 'Items list navigation', 'investinhalland' ),
-//         'filter_items_list'     => __( 'Filter items list', 'investinhalland' ),
-//     );
 
-//     $rewrite = array(
-//         'slug'                  => 'statistik',
-//         'with_front'            => true,
-//         'pages'                 => true,
-//         'feeds'                 => true,
-//     );
-    
-//     $args = array(
-//         'label'                 => __( 'Statistic', 'investinhalland' ),
-//         'description'           => __( 'Statistics', 'investinhalland' ),
-//         'labels'                => $labels,
-//         'supports'              => array( 'title', 'editor', 'thumbnail', 'author' ),
-//         'hierarchical'          => false,
-//         'public'                => true,
-//         'show_ui'               => true,
-//         'show_in_menu'          => true,
-//         'menu_icon'             => 'dashicons-chart-bar',
-//         'menu_position'         => 5,
-//         'show_in_admin_bar'     => true,
-//         'show_in_nav_menus'     => true,
-//         'can_export'            => true,
-//         'has_archive'           => true,
-//         'exclude_from_search'   => false,
-//         'publicly_queryable'    => true,
-//         'capability_type'       => 'page',
-//         'show_in_rest'          => true,
-//         'rewrite'               => $rewrite,
-//     );
-    
-//     register_post_type( 'statistic', $args );
-// }, 0);
 
-// /**
-//  * Custom Post Type: Nyheter
-//  */
-// add_action('init', function() {
-//     $labels = array(
-//         'name'                  => _x( 'Nyheter', 'Post Type General Name', 'investinhalland' ),
-//         'singular_name'         => _x( 'Nyhet', 'Post Type Singular Name', 'investinhalland' ),
-//         'menu_name'             => __( 'Nyheter', 'investinhalland' ),
-//         'name_admin_bar'        => __( 'Nyheter', 'investinhalland' ),
-//         'parent_item_colon'     => __( 'Parent Item:', 'investinhalland' ),
-//         'search_items'          => __( 'Search Item', 'investinhalland' ),
-//         'items_list'            => __( 'Items list', 'investinhalland' ),
-//         'items_list_navigation' => __( 'Items list navigation', 'investinhalland' ),
-//         'filter_items_list'     => __( 'Filter items list', 'investinhalland' ),
-//     );
-//     $rewrite = array(
-//         'slug'                  => 'nyheter',
-//         'with_front'            => true,
-//         'pages'                 => true,
-//         'feeds'                 => true,
-//     );
-    
-//     $args = array(
-//         'label'                 => __( 'News', 'investinhalland' ),
-//         'description'           => __( 'News', 'investinhalland' ),
-//         'labels'                => $labels,
-//         'supports'              => array( 'title', 'editor', 'thumbnail', 'author'),
-//         'taxonomies'            => array( 'area' ),
-//         'hierarchical'          => false,
-//         'public'                => true,
-//         'show_ui'               => true,
-//         'show_in_menu'          => true,
-//         'menu_icon'             => 'dashicons-rss',
-//         'menu_position'         => 13,
-//         'show_in_admin_bar'     => true,
-//         'show_in_nav_menus'     => true,
-//         'show_in_nav_rest'      => true,
-//         'can_export'            => true,
-//         'has_archive'           => true,
-//         'exclude_from_search'   => false,
-//         'publicly_queryable'    => true,
-//         'capability_type'       => 'page',
-//         'show_in_rest'          => true,
-//         'rewrite'               => $rewrite
-//     );
-    
-//     register_post_type( 'news', $args );
-// }, 0);
+add_action('acf/init', function() {
+	// check function exists
+	if( function_exists('acf_register_block') ) {		
+		// register a fact block
+		acf_register_block(array(
+			'name'				=> 'fact',
+			'title'				=> __('Fakta'),
+			'description'		=> __('Fakta om Halland'),
+			'render_template'   => 'template-parts/block/content-fact.php',
+			'category'			=> 'formatting',
+			'icon'				=> 'info',
+			'keywords'			=> array( 'fact' ),
+        ));
+
+        // Register a company fact block
+        acf_register_block(array(
+			'name'				=> 'company_fact',
+			'title'				=> __('Företagsfakta'),
+			'description'		=> __('Fakta om ett företag'),
+			'render_template'   => 'template-parts/block/content-company-fact.php',
+			'category'			=> 'formatting',
+			'icon'				=> 'businessman',
+			'keywords'			=> array( 'company_fact' ),
+        ));
+	}
+});
+
+add_action(
+	'rest_api_init',
+	function () {
+
+		if ( ! function_exists( 'use_block_editor_for_post_type' ) ) {
+			require ABSPATH . 'wp-admin/includes/post.php';
+		}
+
+		// Surface all Gutenberg blocks in the WordPress REST API
+		$post_types = get_post_types_by_support( [ 'editor' ] );
+		foreach ( $post_types as $post_type ) {
+			if ( use_block_editor_for_post_type( $post_type ) ) {
+				register_rest_field(
+					$post_type,
+					'blocks',
+					[
+						'get_callback' => function ( array $post ) {
+							return parse_blocks( $post['content']['raw'] );
+						},
+					]
+				);
+			}
+		}
+	}
+);
+// Enable the option show in rest
+add_filter( 'acf/rest_api/field_settings/show_in_rest', '__return_true' );
+
+// Enable the option edit in rest
+add_filter( 'acf/rest_api/field_settings/edit_in_rest', '__return_true' );
+
