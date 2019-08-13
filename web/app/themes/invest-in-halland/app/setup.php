@@ -417,17 +417,6 @@ add_action('acf/init', function() {
 			'icon'				=> 'info',
 			'keywords'			=> array( 'fact' ),
         ));
-
-        // Register a company fact block
-        acf_register_block(array(
-			'name'				=> 'company_fact',
-			'title'				=> __('Företagsfakta'),
-			'description'		=> __('Fakta om ett företag'),
-			'render_template'   => 'template-parts/block/content-company-fact.php',
-			'category'			=> 'formatting',
-			'icon'				=> 'businessman',
-			'keywords'			=> array( 'company_fact' ),
-        ));
 	}
 });
 
