@@ -401,9 +401,6 @@ add_action('init', function () {
 
 }, 0 );
 
-
-
-
 add_action('acf/init', function() {
 	// check function exists
 	if( function_exists('acf_register_block') ) {		
@@ -451,3 +448,19 @@ add_filter( 'acf/rest_api/field_settings/show_in_rest', '__return_true' );
 // Enable the option edit in rest
 add_filter( 'acf/rest_api/field_settings/edit_in_rest', '__return_true' );
 
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'page_title'    => 'Innehåll',
+        'menu_title'    => 'Innehåll',
+        'menu_slug'     => 'theme-general',
+        'position'      => 20,
+        'capability'    => 'edit_posts',
+        'redirect'      => true
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Sidfot',
+        'menu_title'    => 'Sidfot',
+        'parent_slug'   => 'theme-general',
+    )); 
+}

@@ -15,8 +15,10 @@
                 "class": "",
                 "id": ""
             },
+            "show_in_rest": 0,
+            "edit_in_rest": 0,
             "default_value": "",
-            "tabs": "all",
+            "tabs": "visual",
             "toolbar": "basic",
             "media_upload": 1,
             "delay": 0
