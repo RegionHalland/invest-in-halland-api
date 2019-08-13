@@ -244,7 +244,7 @@ add_action('init', function() {
 }, 0);
 
 /**
-    * Custom Post Type: Facts
+    * Custom Post Type: Fact
 */
 add_action('init', function() {
     $labels = array(
@@ -286,7 +286,53 @@ add_action('init', function() {
     register_post_type( 'fact', $args );
 }, 0);
 
-// Register Custom Taxonomy Area
+/**
+    * Custom Post Type: Contact
+*/
+add_action('init', function() {
+    $labels = array(
+        'name'                  => _x( 'Kontaktpersoner', 'Post Type General Name', 'investinhalland' ),
+        'singular_name'         => _x( 'Kontaktperson', 'Post Type Singular Name', 'investinhalland' ),
+        'menu_name'             => __( 'Kontaktpersoner', 'investinhalland' ),
+        'name_admin_bar'        => __( 'Kontaktpersoner', 'investinhalland' ),
+    );
+
+    $rewrite = array(
+        'slug'                  => 'fact',
+        'with_front'            => true,
+        'pages'                 => true,
+        'feeds'                 => true,
+    );
+    
+    $args = array(
+        'label'                 => __( 'Kontaktperson', 'investinhalland' ),
+        'description'           => __( 'Kontaktperson', 'investinhalland' ),
+        'labels'                => $labels,
+        'supports'              => array( 'title', 'editor', 'thumbnail', 'author' ),
+        'hierarchical'          => false,
+        'public'                => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'menu_icon'             => 'dashicons-id',
+        'menu_position'         => 12,
+        'show_in_admin_bar'     => true,
+        'show_in_nav_menus'     => true,
+        'can_export'            => true,
+        'has_archive'           => true,
+        'exclude_from_search'   => false,
+        'publicly_queryable'    => true,
+        'capability_type'       => 'page',
+        'show_in_rest'          => true,
+        'rewrite'               => $rewrite,
+    );
+    
+    register_post_type( 'contact', $args );
+}, 0);
+
+
+/**
+    * Custom Taxonomy: Area
+*/
 add_action('init', function () {
 
 	$labels = array(
