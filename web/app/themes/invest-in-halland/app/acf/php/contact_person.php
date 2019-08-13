@@ -103,6 +103,6 @@
     'instruction_placement' => 'label',
     'hide_on_screen' => '',
     'active' => true,
-    'description' => '',
+    'description' => 'Information som är kopplad till en kontaktperson.',
 ));
 }

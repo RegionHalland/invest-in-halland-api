@@ -46,6 +46,6 @@
     'instruction_placement' => 'label',
     'hide_on_screen' => '',
     'active' => true,
-    'description' => '',
+    'description' => 'Fakta om Halland som är utvald att visas i en artikel.',
 ));
 }
