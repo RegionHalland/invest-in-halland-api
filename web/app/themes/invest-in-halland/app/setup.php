@@ -350,7 +350,54 @@ add_action('init', function () {
         'show_tagcloud'              => true,
         'show_in_rest'              => true,
 	);
-	register_taxonomy( 'area', array( 'company_story', 'opportunity', 'fact' ), $args );
+	register_taxonomy('area', array( 'company_story', 'opportunity', 'fact', 'contact' ), $args );
+
+}, 0 );
+
+/**
+    * Custom Taxonomy: Municipality
+*/
+add_action('init', function () {
+
+	$labels = array(
+		'name'                       => _x( 'Kommuner', 'Taxonomy General Name', 'investinhalland' ),
+		'singular_name'              => _x( 'Kommun', 'Taxonomy Singular Name', 'investinhalland' ),
+		'menu_name'                  => __( 'Kommuner', 'investinhalland' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+        'show_in_rest'              => true,
+	);
+	register_taxonomy('municipality', array( 'company_story', 'opportunity', 'fact', 'contact' ), $args );
+
+}, 0 );
+
+/**
+    * Custom Taxonomy: Actor
+*/
+add_action('init', function () {
+	$labels = array(
+		'name'                       => _x( 'Aktörer', 'Taxonomy General Name', 'investinhalland' ),
+		'singular_name'              => _x( 'Aktör', 'Taxonomy Singular Name', 'investinhalland' ),
+		'menu_name'                  => __( 'Aktörer', 'investinhalland' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+        'show_in_rest'              => true,
+	);
+	register_taxonomy('actor', array( 'company_story', 'opportunity', 'fact', 'contact' ), $args );
 
 }, 0 );
 
