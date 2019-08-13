@@ -338,11 +338,14 @@ add_action('init', function() {
     * Custom Taxonomy: Area
 */
 add_action('init', function () {
-
 	$labels = array(
 		'name'                       => _x( 'Områden', 'Taxonomy General Name', 'investinhalland' ),
 		'singular_name'              => _x( 'Område', 'Taxonomy Singular Name', 'investinhalland' ),
 		'menu_name'                  => __( 'Områden', 'investinhalland' ),
+    );
+    $rewrite = array(
+		'slug'                       => 'omraden',
+		'with_front'                 => true,
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -353,6 +356,7 @@ add_action('init', function () {
 		'show_in_nav_menus'          => true,
         'show_tagcloud'              => true,
         'show_in_rest'              => true,
+        'rewrite'                    => $rewrite,
 	);
 	register_taxonomy('area', array( 'company_story', 'opportunity', 'fact', 'contact' ), $args );
 
