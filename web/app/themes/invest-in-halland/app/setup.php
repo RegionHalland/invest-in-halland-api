@@ -474,3 +474,12 @@ if (function_exists('acf_add_options_page')) {
         'parent_slug'   => 'theme-general',
     )); 
 }
+
+add_filter('acf/format_value', function ($value, $post_id, $field) {
+    if (!function_exists('acf_nullify_empty')) {
+        if (empty($value)) {
+            return null;
+        }
+        return $value;
+        }
+}, 100, 3);
