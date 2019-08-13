@@ -6,6 +6,32 @@
     'title' => __('Kontaktperson', 'investinhalland'),
     'fields' => array(
         0 => array(
+            'key' => 'field_5d52716d8b316',
+            'label' => __('Bild', 'investinhalland'),
+            'name' => 'image',
+            'type' => 'image',
+            'instructions' => __('BIld på person.', 'investinhalland'),
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'show_in_rest' => 0,
+            'edit_in_rest' => 0,
+            'return_format' => 'array',
+            'preview_size' => 'medium',
+            'library' => 'all',
+            'min_width' => '',
+            'min_height' => '',
+            'min_size' => '',
+            'max_width' => '',
+            'max_height' => '',
+            'max_size' => '',
+            'mime_types' => '',
+        ),
+        1 => array(
             'key' => 'field_5d5262ba6c49e',
             'label' => __('Företag', 'investinhalland'),
             'name' => 'company',
@@ -26,7 +52,7 @@
             'append' => '',
             'maxlength' => '',
         ),
-        1 => array(
+        2 => array(
             'key' => 'field_5d5262d06c49f',
             'label' => __('E-post', 'investinhalland'),
             'name' => 'email',
@@ -47,7 +73,7 @@
             'append' => '',
             'maxlength' => '',
         ),
-        2 => array(
+        3 => array(
             'key' => 'field_5d5262ea6c4a0',
             'label' => __('Telefonnummer', 'investinhalland'),
             'name' => 'phone',
@@ -68,7 +94,7 @@
             'append' => '',
             'maxlength' => '',
         ),
-        3 => array(
+        4 => array(
             'key' => 'field_5d52631a6c4a1',
             'label' => __('LinkedIn', 'investinhalland'),
             'name' => 'linkedin',

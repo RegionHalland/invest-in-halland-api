@@ -312,7 +312,7 @@ add_action('init', function() {
         'label'                 => __( 'Kontaktperson', 'investinhalland' ),
         'description'           => __( 'Kontaktperson', 'investinhalland' ),
         'labels'                => $labels,
-        'supports'              => array( 'title', 'editor', 'thumbnail', 'author' ),
+        'supports'              => array( 'title', 'thumbnail', 'author' ),
         'hierarchical'          => false,
         'public'                => true,
         'show_ui'               => true,
