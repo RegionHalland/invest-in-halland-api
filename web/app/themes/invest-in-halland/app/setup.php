@@ -149,8 +149,11 @@ add_action('init', function() {
         $acfExportManager->setTextdomain('investinhalland');
         $acfExportManager->setExportFolder(__DIR__ . '/acf');
         $acfExportManager->autoExport(array(
-            'questions' => 'group_5cfe66f4e3ea8',
             'footer' => 'group_5d0774abdb08a',
+            'responsible_contact' => 'group_5d517bb2d658f',
+            'contact_person' => 'group_5d5262b5eac61',
+            'fact' => 'group_5d1ca39e510b8',
+            'company_fact' => 'group_5d514df253be6'
         ));
         $acfExportManager->import();
     }
