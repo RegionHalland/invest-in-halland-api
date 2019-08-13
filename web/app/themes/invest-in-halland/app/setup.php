@@ -150,6 +150,7 @@ add_action('init', function() {
         $acfExportManager->setExportFolder(__DIR__ . '/acf');
         $acfExportManager->autoExport(array(
             'footer' => 'group_5d0774abdb08a',
+            'startpage' => 'group_5d526d10f381b',
             'responsible_contact' => 'group_5d517bb2d658f',
             'contact_person' => 'group_5d5262b5eac61',
             'fact' => 'group_5d1ca39e510b8',
@@ -460,6 +461,12 @@ if (function_exists('acf_add_options_page')) {
         'capability'    => 'edit_posts',
         'redirect'      => true
     ));
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Startsida',
+        'menu_title'    => 'Startsida',
+        'parent_slug'   => 'theme-general',
+    )); 
 
     acf_add_options_sub_page(array(
         'page_title'    => 'Sidfot',
