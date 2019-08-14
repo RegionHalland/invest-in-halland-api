@@ -15,11 +15,118 @@
                 "class": "",
                 "id": ""
             },
+            "show_in_rest": 0,
+            "edit_in_rest": 0,
             "default_value": "",
-            "tabs": "all",
+            "tabs": "visual",
             "toolbar": "basic",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_5d53b9e8d4137",
+            "label": "H\u00f6gerkolumn",
+            "name": "right_column",
+            "type": "group",
+            "instructions": "H\u00f6gerkolumn i sidfoten",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 0,
+            "edit_in_rest": 0,
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5d53ba79d4139",
+                    "label": "Titel",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "Titel f\u00f6r den h\u00f6gra kolumnen i sidfoten, t.ex. \"Direktkontakt\"",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 0,
+                    "edit_in_rest": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d53ba95d413a",
+                    "label": "Inneh\u00e5ll",
+                    "name": "content",
+                    "type": "repeater",
+                    "instructions": "Inneh\u00e5ll i h\u00f6gerkolumnen i sidfoten",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 0,
+                    "edit_in_rest": 0,
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d53bb35441f7",
+                            "label": "L\u00e4nktext",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "L\u00e4nktext som visas f\u00f6r anv\u00e4ndaren, t.ex. \"Aftonbladet\"",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_rest": 0,
+                            "edit_in_rest": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5d53badad413c",
+                            "label": "L\u00e4nk",
+                            "name": "url",
+                            "type": "text",
+                            "instructions": "URL som l\u00e4nken ska peka till, t.ex. \"https:\/\/www.aftonbladet.se\"",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_rest": 0,
+                            "edit_in_rest": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "location": [
@@ -38,6 +145,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "Information kopplat till sidfoten"
+    "description": "Information kopplat till sidfoten."
 }]
 

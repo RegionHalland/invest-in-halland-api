@@ -2,15 +2,15 @@
 
 if (function_exists('acf_add_local_field_group')) {
     acf_add_local_field_group(array(
-    'key' => 'group_5cfe66f4e3ea8',
-    'title' => __('Frågor', 'investinhalland'),
+    'key' => 'group_5d1ca39e510b8',
+    'title' => __('Fakta', 'investinhalland'),
     'fields' => array(
         0 => array(
-            'key' => 'field_5cfe66fee482e',
-            'label' => __('Utvalda frågor', 'investinhalland'),
-            'name' => 'featured_questions',
-            'type' => 'relationship',
-            'instructions' => __('Välj ett antal utvalda frågor. Minst 1 och max 10 stycken.', 'investinhalland'),
+            'key' => 'field_5d1cb4200a5c3',
+            'label' => __('Fakta', 'investinhalland'),
+            'name' => 'fact',
+            'type' => 'post_object',
+            'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -18,27 +18,24 @@
                 'class' => '',
                 'id' => '',
             ),
+            'show_in_rest' => 1,
+            'edit_in_rest' => 1,
             'post_type' => array(
-                0 => 'question',
+                0 => 'fact',
             ),
             'taxonomy' => '',
-            'filters' => array(
-                0 => 'search',
-                1 => 'post_type',
-                2 => 'taxonomy',
-            ),
-            'elements' => '',
-            'min' => 1,
-            'max' => 10,
+            'allow_null' => 0,
+            'multiple' => 0,
             'return_format' => 'object',
+            'ui' => 1,
         ),
     ),
     'location' => array(
         0 => array(
             0 => array(
-                'param' => 'options_page',
+                'param' => 'block',
                 'operator' => '==',
-                'value' => 'acf-options-utvalda-fragor',
+                'value' => 'acf/fact',
             ),
         ),
     ),
@@ -49,6 +46,6 @@
     'instruction_placement' => 'label',
     'hide_on_screen' => '',
     'active' => true,
-    'description' => 'Information kopplat till Frågor och Svar',
+    'description' => 'Fakta om Halland som är utvald att visas i en artikel.',
 ));
 }
