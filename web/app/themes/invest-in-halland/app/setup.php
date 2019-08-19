@@ -154,7 +154,8 @@ add_action('init', function() {
             'responsible_contact' => 'group_5d517bb2d658f',
             'contact_person' => 'group_5d5262b5eac61',
             'fact' => 'group_5d1ca39e510b8',
-            'company_fact' => 'group_5d514df253be6'
+            'company_fact' => 'group_5d514df253be6',
+            'related_content' => 'group_5d5a90b0d7e12'
         ));
         $acfExportManager->import();
     }

@@ -10,7 +10,7 @@
             'label' => __('Rubrik', 'investinhalland'),
             'name' => 'title',
             'type' => 'text',
-            'instructions' => '',
+            'instructions' => __('Ex: Vill du veta mer om hur det är att starta företag i Halland?', 'investinhalland'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
