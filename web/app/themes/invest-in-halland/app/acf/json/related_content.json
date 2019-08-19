@@ -1,0 +1,80 @@
+[{
+    "key": "group_5d5a90b0d7e12",
+    "title": "Relaterat inneh\u00e5ll",
+    "fields": [
+        {
+            "key": "field_5d5a90e679db0",
+            "label": "Relaterat inneh\u00e5ll",
+            "name": "related_content",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "collapsed": "",
+            "min": 0,
+            "max": 2,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5d5a912379db1",
+                    "label": "Artikel",
+                    "name": "article",
+                    "type": "post_object",
+                    "instructions": "V\u00e4lj artikel eller fakta som \u00e4r relaterad till den artikel som du \u00e4r inne p\u00e5 just nu.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 1,
+                    "edit_in_rest": 0,
+                    "post_type": [
+                        "company_story",
+                        "opportunity",
+                        "fact"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "opportunity"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "company_story"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Relaterat inneh\u00e5ll l\u00e4ggs h\u00e4r"
+}]
+

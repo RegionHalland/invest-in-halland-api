@@ -7,7 +7,7 @@
             "label": "Rubrik",
             "name": "title",
             "type": "text",
-            "instructions": "",
+            "instructions": "Ex: Vill du veta mer om hur det \u00e4r att starta f\u00f6retag i Halland?",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
