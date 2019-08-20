@@ -1,0 +1,136 @@
+[{
+    "key": "group_5d5ba16b6dfdd",
+    "title": "M\u00f6jligheter i Halland",
+    "fields": [
+        {
+            "key": "field_5d5bb0c628b4c",
+            "label": "M\u00f6jligheter i Halland",
+            "name": "opportunities",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 0,
+            "edit_in_rest": 0,
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5d5ba27ed1e45",
+                    "label": "Mindre rubrik",
+                    "name": "sub_title",
+                    "type": "text",
+                    "instructions": "Mindre text som visas \u00f6ver den stora rubriken i sidhuvudet",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 1,
+                    "edit_in_rest": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d5ba21ed1e44",
+                    "label": "Rubrik",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "Stor rubrik som visas i sidhuvudet",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 1,
+                    "edit_in_rest": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d5ba443cc708",
+                    "label": "Utvald artikel",
+                    "name": "featured_article",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 1,
+                    "edit_in_rest": 0,
+                    "post_type": [
+                        "company_story",
+                        "opportunity"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                },
+                {
+                    "key": "field_5d5ba2e487aa8",
+                    "label": "Utvald bild",
+                    "name": "featured_image",
+                    "type": "image",
+                    "instructions": "V\u00e4lj en bakgrundsbild f\u00f6r sidhuvudet",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 1,
+                    "edit_in_rest": 0,
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-mojligheter-i-halland"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Inneh\u00e5ller f\u00e4lt f\u00f6r sidan 'M\u00f6jligheter i Halland'"
+}]
+
