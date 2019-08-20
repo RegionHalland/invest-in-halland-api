@@ -478,6 +478,18 @@ if (function_exists('acf_add_options_page')) {
         'menu_title'    => 'Sidfot',
         'parent_slug'   => 'theme-general',
     )); 
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Möjligheter i Halland',
+        'menu_title'    => 'Möjligheter i Halland',
+        'parent_slug'   => 'theme-general',
+    )); 
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Företagare berättar',
+        'menu_title'    => 'Företagare berättar',
+        'parent_slug'   => 'theme-general',
+    )); 
 }
 
 add_filter('acf/format_value', function ($value, $post_id, $field) {
