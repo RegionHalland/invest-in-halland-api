@@ -499,6 +499,40 @@ add_filter('acf/format_value', function ($value, $post_id, $field) {
         if (empty($value)) {
             return null;
         }
+
         return $value;
         }
 }, 100, 3);
+
+add_filter('acf/format_value/type=post_object', function ( $value, $post_id, $field ) {
+	if (!$value) {
+        // no value, bail early
+        return $value;
+    }
+    $post = get_post($post_id);
+    $area_name = '';
+    if(isset($post->post_type)){
+        if($post->post_type === 'company_story' || $post->post_type === 'opportunity') {
+            $areas = get_the_terms($value->ID, 'area');
+            $area_name = $areas && count($areas) ? $areas[0]->name : '';
+        }
+    }
+
+    $value->area_name = $area_name;
+    $value->url = str_replace(home_url(), '', get_permalink($post_id));
+    $value->featured_media = (int)get_post_thumbnail_id($post_id);
+
+	return $value;
+},  103, 3);
+
+function get_all_image_sizes($attachment_id = 0) {
+    $sizes = get_intermediate_image_sizes();
+    if(!$attachment_id) $attachment_id = get_post_thumbnail_id();
+
+    $images = array();
+    foreach ( $sizes as $size ) {
+        $images[] = wp_get_attachment_image_src( $attachment_id, $size );
+    }
+
+    return $images;
+}

@@ -6,9 +6,9 @@
     'title' => __('Relaterat innehåll', 'investinhalland'),
     'fields' => array(
         0 => array(
-            'key' => 'field_5d5a90e679db0',
-            'label' => __('Relaterat innehåll', 'investinhalland'),
-            'name' => 'related_content',
+            'key' => 'field_5d5bbbccd09ef',
+            'label' => __('Relaterade artiklar', 'investinhalland'),
+            'name' => 'related_articles',
             'type' => 'repeater',
             'instructions' => '',
             'required' => 0,
@@ -27,11 +27,11 @@
             'button_label' => '',
             'sub_fields' => array(
                 0 => array(
-                    'key' => 'field_5d5a912379db1',
-                    'label' => __('Artikel', 'investinhalland'),
-                    'name' => 'article',
+                    'key' => 'field_5d5bbbebd09f0',
+                    'label' => __('Relaterad artikel', 'investinhalland'),
+                    'name' => 'related_article',
                     'type' => 'post_object',
-                    'instructions' => __('Välj artikel eller fakta som är relaterad till den artikel som du är inne på just nu.', 'investinhalland'),
+                    'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -43,8 +43,8 @@
                     'edit_in_rest' => 0,
                     'post_type' => array(
                         0 => 'company_story',
-                        1 => 'opportunity',
-                        2 => 'fact',
+                        1 => 'fact',
+                        2 => 'opportunity',
                     ),
                     'taxonomy' => '',
                     'allow_null' => 0,

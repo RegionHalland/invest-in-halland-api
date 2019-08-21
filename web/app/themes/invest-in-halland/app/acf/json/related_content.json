@@ -3,9 +3,9 @@
     "title": "Relaterat inneh\u00e5ll",
     "fields": [
         {
-            "key": "field_5d5a90e679db0",
-            "label": "Relaterat inneh\u00e5ll",
-            "name": "related_content",
+            "key": "field_5d5bbbccd09ef",
+            "label": "Relaterade artiklar",
+            "name": "related_articles",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -24,11 +24,11 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5d5a912379db1",
-                    "label": "Artikel",
-                    "name": "article",
+                    "key": "field_5d5bbbebd09f0",
+                    "label": "Relaterad artikel",
+                    "name": "related_article",
                     "type": "post_object",
-                    "instructions": "V\u00e4lj artikel eller fakta som \u00e4r relaterad till den artikel som du \u00e4r inne p\u00e5 just nu.",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -40,8 +40,8 @@
                     "edit_in_rest": 0,
                     "post_type": [
                         "company_story",
-                        "opportunity",
-                        "fact"
+                        "fact",
+                        "opportunity"
                     ],
                     "taxonomy": "",
                     "allow_null": 0,
