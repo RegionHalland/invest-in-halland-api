@@ -519,20 +519,8 @@ add_filter('acf/format_value/type=post_object', function ( $value, $post_id, $fi
     }
 
     $value->area_name = $area_name;
-    $value->url = str_replace(home_url(), '', get_permalink($post_id));
-    $value->featured_media = (int)get_post_thumbnail_id($post_id);
+    $value->url = str_replace(home_url(), '', get_permalink($value->ID));
+    $value->featured_media = get_post_thumbnail_id($value->ID) ? (int)get_post_thumbnail_id($value->ID) : null;
 
 	return $value;
 },  103, 3);
-
-function get_all_image_sizes($attachment_id = 0) {
-    $sizes = get_intermediate_image_sizes();
-    if(!$attachment_id) $attachment_id = get_post_thumbnail_id();
-
-    $images = array();
-    foreach ( $sizes as $size ) {
-        $images[] = wp_get_attachment_image_src( $attachment_id, $size );
-    }
-
-    return $images;
-}
