@@ -157,7 +157,8 @@ add_action('init', function() {
             'company_fact' => 'group_5d514df253be6',
             'related_content' => 'group_5d5a90b0d7e12',
             'opportunities' => 'group_5d5ba16b6dfdd',
-            'company_stories' => 'group_5d5ba7b55a803'
+            'company_stories' => 'group_5d5ba7b55a803',
+            'introduction' => 'group_5d5e8cad5c856'
         ));
         $acfExportManager->import();
     }
@@ -424,6 +425,16 @@ add_action('acf/init', function() {
 			'category'			=> 'formatting',
 			'icon'				=> 'info',
 			'keywords'			=> array( 'fact' ),
+        ));
+        
+        acf_register_block(array(
+            'name'              => 'introduction',
+            'title'             => __('Ingress'),
+            'description'       => __('Ingress för artikeln'),
+            'render_template'   => 'template-parts/block/content-introduction.php',
+            'category'          => 'formatting',
+            'icon'              => 'info',
+            'keywords'          => array( 'introduction' ),
         ));
 	}
 });
