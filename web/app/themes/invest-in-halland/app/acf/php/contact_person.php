@@ -18,7 +18,7 @@
                 'class' => '',
                 'id' => '',
             ),
-            'show_in_rest' => 0,
+            'show_in_rest' => 1,
             'edit_in_rest' => 0,
             'return_format' => 'array',
             'preview_size' => 'medium',

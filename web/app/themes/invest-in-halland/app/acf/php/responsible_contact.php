@@ -18,7 +18,7 @@
                 'class' => '',
                 'id' => '',
             ),
-            'show_in_rest' => 0,
+            'show_in_rest' => 1,
             'edit_in_rest' => 0,
             'default_value' => '',
             'placeholder' => '',
@@ -39,7 +39,7 @@
                 'class' => '',
                 'id' => '',
             ),
-            'show_in_rest' => 0,
+            'show_in_rest' => 1,
             'edit_in_rest' => 0,
             'post_type' => array(
                 0 => 'contact',
@@ -64,6 +64,13 @@
                 'param' => 'post_type',
                 'operator' => '==',
                 'value' => 'opportunity',
+            ),
+        ),
+        2 => array(
+            0 => array(
+                'param' => 'post_type',
+                'operator' => '==',
+                'value' => 'fact',
             ),
         ),
     ),

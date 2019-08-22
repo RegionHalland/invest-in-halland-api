@@ -431,10 +431,18 @@ add_action('acf/init', function() {
 add_action(
 	'rest_api_init',
 	function () {
-
 		if ( ! function_exists( 'use_block_editor_for_post_type' ) ) {
 			require ABSPATH . 'wp-admin/includes/post.php';
-		}
+        }
+        
+        // Add url for use with gatsby
+        register_rest_field( array('fact'), 'gatsby_url',
+        array(
+            'get_callback' => function($post) {
+                return str_replace(home_url(), '', get_permalink($post['id']));
+            },
+        )
+        );
 
 		// Surface all Gutenberg blocks in the WordPress REST API
 		$post_types = get_post_types_by_support( [ 'editor' ] );
@@ -515,6 +523,14 @@ add_filter('acf/format_value/type=post_object', function ( $value, $post_id, $fi
         if($post->post_type === 'company_story' || $post->post_type === 'opportunity') {
             $areas = get_the_terms($value->ID, 'area');
             $area_name = $areas && count($areas) ? $areas[0]->name : '';
+        }
+    }
+
+    $value->contact = get_field('contact', $value->ID) ? get_field('contact', $value->ID) : null;
+    if($value->contact) {
+        $value->contact->acf = get_fields($value->contact->ID);
+        if($value->contact->acf["image"]) {
+            $value->contact->acf["featured_media"] = $value->contact->acf["image"]["ID"];
         }
     }
 
