@@ -154,7 +154,11 @@ add_action('init', function() {
             'responsible_contact' => 'group_5d517bb2d658f',
             'contact_person' => 'group_5d5262b5eac61',
             'fact' => 'group_5d1ca39e510b8',
-            'company_fact' => 'group_5d514df253be6'
+            'company_fact' => 'group_5d514df253be6',
+            'related_content' => 'group_5d5a90b0d7e12',
+            'opportunities' => 'group_5d5ba16b6dfdd',
+            'company_stories' => 'group_5d5ba7b55a803',
+            'introduction' => 'group_5d5e8cad5c856'
         ));
         $acfExportManager->import();
     }
@@ -422,16 +426,34 @@ add_action('acf/init', function() {
 			'icon'				=> 'info',
 			'keywords'			=> array( 'fact' ),
         ));
+        
+        acf_register_block(array(
+            'name'              => 'introduction',
+            'title'             => __('Ingress'),
+            'description'       => __('Ingress för artikeln'),
+            'render_template'   => 'template-parts/block/content-introduction.php',
+            'category'          => 'formatting',
+            'icon'              => 'info',
+            'keywords'          => array( 'introduction' ),
+        ));
 	}
 });
 
 add_action(
 	'rest_api_init',
 	function () {
-
 		if ( ! function_exists( 'use_block_editor_for_post_type' ) ) {
 			require ABSPATH . 'wp-admin/includes/post.php';
-		}
+        }
+        
+        // Add url for use with gatsby
+        register_rest_field( array('fact'), 'gatsby_url',
+        array(
+            'get_callback' => function($post) {
+                return str_replace(home_url(), '', get_permalink($post['id']));
+            },
+        )
+        );
 
 		// Surface all Gutenberg blocks in the WordPress REST API
 		$post_types = get_post_types_by_support( [ 'editor' ] );
@@ -477,6 +499,18 @@ if (function_exists('acf_add_options_page')) {
         'menu_title'    => 'Sidfot',
         'parent_slug'   => 'theme-general',
     )); 
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Möjligheter i Halland',
+        'menu_title'    => 'Möjligheter i Halland',
+        'parent_slug'   => 'theme-general',
+    )); 
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Företagare berättar',
+        'menu_title'    => 'Företagare berättar',
+        'parent_slug'   => 'theme-general',
+    )); 
 }
 
 add_filter('acf/format_value', function ($value, $post_id, $field) {
@@ -484,6 +518,36 @@ add_filter('acf/format_value', function ($value, $post_id, $field) {
         if (empty($value)) {
             return null;
         }
+
         return $value;
         }
 }, 100, 3);
+
+add_filter('acf/format_value/type=post_object', function ( $value, $post_id, $field ) {
+	if (!$value) {
+        // no value, bail early
+        return $value;
+    }
+    $post = get_post($post_id);
+    $area_name = '';
+    if(isset($post->post_type)){
+        if($post->post_type === 'company_story' || $post->post_type === 'opportunity') {
+            $areas = get_the_terms($value->ID, 'area');
+            $area_name = $areas && count($areas) ? $areas[0]->name : '';
+        }
+    }
+
+    $value->contact = get_field('contact', $value->ID) ? get_field('contact', $value->ID) : null;
+    if($value->contact) {
+        $value->contact->acf = get_fields($value->contact->ID);
+        if($value->contact->acf["image"]) {
+            $value->contact->acf["featured_media"] = $value->contact->acf["image"]["ID"];
+        }
+    }
+
+    $value->area_name = $area_name;
+    $value->url = str_replace(home_url(), '', get_permalink($value->ID));
+    $value->featured_media = get_post_thumbnail_id($value->ID) ? (int)get_post_thumbnail_id($value->ID) : null;
+
+	return $value;
+},  103, 3);

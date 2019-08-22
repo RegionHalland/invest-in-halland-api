@@ -10,7 +10,7 @@
             'label' => __('Rubrik', 'investinhalland'),
             'name' => 'title',
             'type' => 'text',
-            'instructions' => '',
+            'instructions' => __('Ex: Vill du veta mer om hur det är att starta företag i Halland?', 'investinhalland'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -18,7 +18,7 @@
                 'class' => '',
                 'id' => '',
             ),
-            'show_in_rest' => 0,
+            'show_in_rest' => 1,
             'edit_in_rest' => 0,
             'default_value' => '',
             'placeholder' => '',
@@ -39,7 +39,7 @@
                 'class' => '',
                 'id' => '',
             ),
-            'show_in_rest' => 0,
+            'show_in_rest' => 1,
             'edit_in_rest' => 0,
             'post_type' => array(
                 0 => 'contact',
@@ -57,6 +57,20 @@
                 'param' => 'post_type',
                 'operator' => '==',
                 'value' => 'company_story',
+            ),
+        ),
+        1 => array(
+            0 => array(
+                'param' => 'post_type',
+                'operator' => '==',
+                'value' => 'opportunity',
+            ),
+        ),
+        2 => array(
+            0 => array(
+                'param' => 'post_type',
+                'operator' => '==',
+                'value' => 'fact',
             ),
         ),
     ),

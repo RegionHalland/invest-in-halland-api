@@ -1,0 +1,136 @@
+[{
+    "key": "group_5d5ba7b55a803",
+    "title": "F\u00f6retagare ber\u00e4ttar",
+    "fields": [
+        {
+            "key": "field_5d5bb15d22318",
+            "label": "F\u00f6retagare ber\u00e4ttar",
+            "name": "company_stories",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5d5ba7b5eccff",
+                    "label": "Mindre rubrik",
+                    "name": "sub_title",
+                    "type": "text",
+                    "instructions": "Mindre text som visas \u00f6ver den stora rubriken i sidhuvudet",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 1,
+                    "edit_in_rest": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d5ba7b5ecd2e",
+                    "label": "Rubrik",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "Stor rubrik som visas i sidhuvudet",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 1,
+                    "edit_in_rest": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d5ba7b5ecd57",
+                    "label": "Utvald bild",
+                    "name": "featured_image",
+                    "type": "image",
+                    "instructions": "V\u00e4lj en bakgrundsbild f\u00f6r sidhuvudet",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 1,
+                    "edit_in_rest": 0,
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5d5ba7b5ecd7f",
+                    "label": "Utvald artikel",
+                    "name": "featured_article",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 1,
+                    "edit_in_rest": 0,
+                    "post_type": [
+                        "company_story",
+                        "opportunity"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-foretagare-berattar"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Inneh\u00e5ller f\u00e4lt f\u00f6r sidan 'F\u00f6retagare ber\u00e4ttar''"
+}]
+
