@@ -11,7 +11,7 @@
             'name' => 'image',
             'type' => 'image',
             'instructions' => __('BIld på person.', 'investinhalland'),
-            'required' => 0,
+            'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
                 'width' => '',
@@ -37,7 +37,7 @@
             'name' => 'company',
             'type' => 'text',
             'instructions' => '',
-            'required' => 0,
+            'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
                 'width' => '',
@@ -58,7 +58,7 @@
             'name' => 'email',
             'type' => 'text',
             'instructions' => '',
-            'required' => 0,
+            'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
                 'width' => '',
@@ -79,7 +79,7 @@
             'name' => 'phone',
             'type' => 'text',
             'instructions' => '',
-            'required' => 0,
+            'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
                 'width' => '',

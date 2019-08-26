@@ -32,7 +32,7 @@
             'name' => 'contact',
             'type' => 'post_object',
             'instructions' => '',
-            'required' => 0,
+            'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
                 'width' => '',
