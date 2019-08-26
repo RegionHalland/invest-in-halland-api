@@ -433,7 +433,7 @@ add_action('acf/init', function() {
             'description'       => __('Ingress för artikeln'),
             'render_template'   => 'template-parts/block/content-introduction.php',
             'category'          => 'formatting',
-            'icon'              => 'info',
+            'icon'              => 'editor-insertmore',
             'keywords'          => array( 'introduction' ),
         ));
 	}
