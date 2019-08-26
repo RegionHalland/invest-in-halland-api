@@ -553,3 +553,25 @@ add_filter('acf/format_value/type=post_object', function ( $value, $post_id, $fi
 
 	return $value;
 },  103, 3);
+
+add_filter('acf/format_value/type=relationship', function ( $value, $post_id, $field ) {
+	if (!$value) {
+        // no value, bail early
+        return $value;
+    }
+
+    foreach ($value as $key => $post) {
+        $area_name = '';
+        $areas = get_the_terms($post->ID, 'area');
+        $area_name = $areas && count($areas) ? $areas[0]->name : '';
+
+        $post->area = $areas && count($areas) ? $areas : null;
+        $post->area_name = $area_name;
+        $post->path = str_replace(home_url(), '', get_permalink($post->ID));
+        $post->featured_media = get_post_thumbnail_id($post->ID) ? (int)get_post_thumbnail_id($post->ID) : null;
+        
+        $post->title = $post->post_title;
+    }
+
+	return $value;
+},  103, 3);
