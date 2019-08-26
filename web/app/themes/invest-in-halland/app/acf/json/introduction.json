@@ -8,7 +8,7 @@
             "name": "introduction",
             "type": "textarea",
             "instructions": "Fyll i en ingress",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",

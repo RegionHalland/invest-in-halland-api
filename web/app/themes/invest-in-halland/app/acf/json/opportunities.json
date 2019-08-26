@@ -8,7 +8,7 @@
             "name": "opportunities",
             "type": "group",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -25,7 +25,7 @@
                     "name": "sub_title",
                     "type": "text",
                     "instructions": "Mindre text som visas \u00f6ver den stora rubriken i sidhuvudet",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -46,7 +46,7 @@
                     "name": "title",
                     "type": "text",
                     "instructions": "Stor rubrik som visas i sidhuvudet",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -62,37 +62,12 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5d5ba443cc708",
-                    "label": "Utvald artikel",
-                    "name": "featured_article",
-                    "type": "post_object",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "show_in_rest": 1,
-                    "edit_in_rest": 0,
-                    "post_type": [
-                        "company_story",
-                        "opportunity"
-                    ],
-                    "taxonomy": "",
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "return_format": "object",
-                    "ui": 1
-                },
-                {
                     "key": "field_5d5ba2e487aa8",
                     "label": "Utvald bild",
                     "name": "featured_image",
                     "type": "image",
                     "instructions": "V\u00e4lj en bakgrundsbild f\u00f6r sidhuvudet",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
