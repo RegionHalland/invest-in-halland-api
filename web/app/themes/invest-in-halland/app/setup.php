@@ -537,6 +537,8 @@ add_filter('acf/format_value/type=post_object', function ( $value, $post_id, $fi
         }
     }
 
+    if($value->post_type === 'contact') $value->acf = get_fields($value->ID);
+
     $value->contact = get_field('contact', $value->ID) ? get_field('contact', $value->ID) : null;
     if($value->contact) {
         $value->contact->acf = get_fields($value->contact->ID);
