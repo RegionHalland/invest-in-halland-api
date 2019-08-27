@@ -573,12 +573,6 @@ add_filter('acf/format_value/type=relationship', function ( $value, $post_id, $f
         $post->title = $post->post_title;
 
         $post->contact = get_field('contact', $post->ID) ? get_field('contact', $post->ID) : null;
-        // if($post->contact) {
-        //     $post->contact->acf = get_fields($post->contact->ID);
-        //     if($post->contact->acf["image"]) {
-        //         $post->contact->acf["featured_media"] = $post->contact->acf["image"]["ID"];
-        //     }
-        // }
     }
 
 	return $value;
