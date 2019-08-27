@@ -70,6 +70,13 @@
                 'value' => 'company_story',
             ),
         ),
+        2 => array(
+            0 => array(
+                'param' => 'post_type',
+                'operator' => '==',
+                'value' => 'fact',
+            ),
+        ),
     ),
     'menu_order' => 0,
     'position' => 'normal',
