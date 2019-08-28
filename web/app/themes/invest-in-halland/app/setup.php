@@ -306,7 +306,7 @@ add_action('init', function() {
     );
 
     $rewrite = array(
-        'slug'                  => 'fact',
+        'slug'                  => 'contact',
         'with_front'            => true,
         'pages'                 => true,
         'feeds'                 => true,
@@ -492,25 +492,31 @@ if (function_exists('acf_add_options_page')) {
         'page_title'    => 'Startsida',
         'menu_title'    => 'Startsida',
         'parent_slug'   => 'theme-general',
-    )); 
+    ));
 
     acf_add_options_sub_page(array(
         'page_title'    => 'Sidfot',
         'menu_title'    => 'Sidfot',
         'parent_slug'   => 'theme-general',
-    )); 
+    ));
 
     acf_add_options_sub_page(array(
         'page_title'    => 'Möjligheter i Halland',
         'menu_title'    => 'Möjligheter i Halland',
         'parent_slug'   => 'theme-general',
-    )); 
+    ));
 
     acf_add_options_sub_page(array(
         'page_title'    => 'Företagare berättar',
         'menu_title'    => 'Företagare berättar',
         'parent_slug'   => 'theme-general',
-    )); 
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Kontakta oss',
+        'menu_title'    => 'Kontakta oss',
+        'parent_slug'   => 'theme-general',
+    ));
 }
 
 add_filter('acf/format_value', function ($value, $post_id, $field) {
