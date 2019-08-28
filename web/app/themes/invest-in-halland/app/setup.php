@@ -158,7 +158,8 @@ add_action('init', function() {
             'related_content' => 'group_5d5a90b0d7e12',
             'opportunities' => 'group_5d5ba16b6dfdd',
             'company_stories' => 'group_5d5ba7b55a803',
-            'introduction' => 'group_5d5e8cad5c856'
+            'introduction' => 'group_5d5e8cad5c856',
+            'contact_page' => 'group_5d651ddd98651'
         ));
         $acfExportManager->import();
     }
@@ -263,7 +264,7 @@ add_action('init', function() {
     );
 
     $rewrite = array(
-        'slug'                  => 'fact',
+        'slug'                  => 'fakta',
         'with_front'            => true,
         'pages'                 => true,
         'feeds'                 => true,
@@ -306,7 +307,7 @@ add_action('init', function() {
     );
 
     $rewrite = array(
-        'slug'                  => 'fact',
+        'slug'                  => 'contact',
         'with_front'            => true,
         'pages'                 => true,
         'feeds'                 => true,
@@ -433,7 +434,7 @@ add_action('acf/init', function() {
             'description'       => __('Ingress för artikeln'),
             'render_template'   => 'template-parts/block/content-introduction.php',
             'category'          => 'formatting',
-            'icon'              => 'info',
+            'icon'              => 'editor-insertmore',
             'keywords'          => array( 'introduction' ),
         ));
 	}
@@ -492,25 +493,31 @@ if (function_exists('acf_add_options_page')) {
         'page_title'    => 'Startsida',
         'menu_title'    => 'Startsida',
         'parent_slug'   => 'theme-general',
-    )); 
+    ));
 
     acf_add_options_sub_page(array(
         'page_title'    => 'Sidfot',
         'menu_title'    => 'Sidfot',
         'parent_slug'   => 'theme-general',
-    )); 
+    ));
 
     acf_add_options_sub_page(array(
         'page_title'    => 'Möjligheter i Halland',
         'menu_title'    => 'Möjligheter i Halland',
         'parent_slug'   => 'theme-general',
-    )); 
+    ));
 
     acf_add_options_sub_page(array(
         'page_title'    => 'Företagare berättar',
         'menu_title'    => 'Företagare berättar',
         'parent_slug'   => 'theme-general',
-    )); 
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Kontakta oss',
+        'menu_title'    => 'Kontakta oss',
+        'parent_slug'   => 'theme-general',
+    ));
 }
 
 add_filter('acf/format_value', function ($value, $post_id, $field) {
@@ -550,6 +557,30 @@ add_filter('acf/format_value/type=post_object', function ( $value, $post_id, $fi
     $value->area_name = $area_name;
     $value->url = str_replace(home_url(), '', get_permalink($value->ID));
     $value->featured_media = get_post_thumbnail_id($value->ID) ? (int)get_post_thumbnail_id($value->ID) : null;
+
+	return $value;
+},  103, 3);
+
+add_filter('acf/format_value/type=relationship', function ( $value, $post_id, $field ) {
+	if (!$value) {
+        // no value, bail early
+        return $value;
+    }
+
+    foreach ($value as $key => $post) {
+        $area_name = '';
+        $areas = get_the_terms($post->ID, 'area');
+        $area_name = $areas && count($areas) ? $areas[0]->name : '';
+
+        $post->area = $areas && count($areas) ? $areas : null;
+        $post->area_name = $area_name;
+        $post->path = str_replace(home_url(), '', get_permalink($post->ID));
+        $post->featured_media = get_post_thumbnail_id($post->ID) ? (int)get_post_thumbnail_id($post->ID) : null;
+        
+        $post->title = $post->post_title;
+
+        $post->contact = get_field('contact', $post->ID) ? get_field('contact', $post->ID) : null;
+    }
 
 	return $value;
 },  103, 3);

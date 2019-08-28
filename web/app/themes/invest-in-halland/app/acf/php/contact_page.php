@@ -2,13 +2,13 @@
 
 if (function_exists('acf_add_local_field_group')) {
     acf_add_local_field_group(array(
-    'key' => 'group_5d5ba16b6dfdd',
-    'title' => __('Möjligheter i Halland', 'investinhalland'),
+    'key' => 'group_5d651ddd98651',
+    'title' => __('Kontakta oss', 'investinhalland'),
     'fields' => array(
         0 => array(
-            'key' => 'field_5d5bb0c628b4c',
-            'label' => __('Möjligheter i Halland', 'investinhalland'),
-            'name' => 'opportunities',
+            'key' => 'field_5d651de98b11b',
+            'label' => __('Kontakta oss', 'investinhalland'),
+            'name' => 'contact',
             'type' => 'group',
             'instructions' => '',
             'required' => 1,
@@ -23,7 +23,7 @@
             'layout' => 'block',
             'sub_fields' => array(
                 0 => array(
-                    'key' => 'field_5d5ba27ed1e45',
+                    'key' => 'field_5d651e138b11c',
                     'label' => __('Mindre rubrik', 'investinhalland'),
                     'name' => 'sub_title',
                     'type' => 'text',
@@ -44,7 +44,7 @@
                     'maxlength' => '',
                 ),
                 1 => array(
-                    'key' => 'field_5d5ba21ed1e44',
+                    'key' => 'field_5d651e3d8b11d',
                     'label' => __('Rubrik', 'investinhalland'),
                     'name' => 'title',
                     'type' => 'text',
@@ -65,7 +65,7 @@
                     'maxlength' => '',
                 ),
                 2 => array(
-                    'key' => 'field_5d5ba2e487aa8',
+                    'key' => 'field_5d651e578b11e',
                     'label' => __('Utvald bild', 'investinhalland'),
                     'name' => 'featured_image',
                     'type' => 'image',
@@ -90,6 +90,48 @@
                     'max_size' => '',
                     'mime_types' => '',
                 ),
+                3 => array(
+                    'key' => 'field_5d651e868b11f',
+                    'label' => __('E-post', 'investinhalland'),
+                    'name' => 'email',
+                    'type' => 'text',
+                    'instructions' => __('Ange e-post för kontakt.', 'investinhalland'),
+                    'required' => 1,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'show_in_rest' => 1,
+                    'edit_in_rest' => 0,
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => '',
+                ),
+                4 => array(
+                    'key' => 'field_5d651e9a8b120',
+                    'label' => __('Telefonnummer', 'investinhalland'),
+                    'name' => 'phone',
+                    'type' => 'text',
+                    'instructions' => __('Ange telefonnummer för kontakt.', 'investinhalland'),
+                    'required' => 1,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'show_in_rest' => 1,
+                    'edit_in_rest' => 0,
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => '',
+                ),
             ),
         ),
     ),
@@ -98,7 +140,7 @@
             0 => array(
                 'param' => 'options_page',
                 'operator' => '==',
-                'value' => 'acf-options-mojligheter-i-halland',
+                'value' => 'acf-options-kontakta-oss',
             ),
         ),
     ),
@@ -109,6 +151,6 @@
     'instruction_placement' => 'label',
     'hide_on_screen' => '',
     'active' => true,
-    'description' => 'Innehåller fält för sidan \'Möjligheter i Halland\'',
+    'description' => '',
 ));
 }

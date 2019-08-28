@@ -8,14 +8,14 @@
             "name": "description",
             "type": "wysiwyg",
             "instructions": "Text under logotypen i sidfoten",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "show_in_rest": 0,
+            "show_in_rest": 1,
             "edit_in_rest": 0,
             "default_value": "",
             "tabs": "visual",
@@ -29,14 +29,14 @@
             "name": "right_column",
             "type": "group",
             "instructions": "H\u00f6gerkolumn i sidfoten",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "show_in_rest": 0,
+            "show_in_rest": 1,
             "edit_in_rest": 0,
             "layout": "block",
             "sub_fields": [
@@ -46,14 +46,14 @@
                     "name": "title",
                     "type": "text",
                     "instructions": "Titel f\u00f6r den h\u00f6gra kolumnen i sidfoten, t.ex. \"Direktkontakt\"",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "show_in_rest": 0,
+                    "show_in_rest": 1,
                     "edit_in_rest": 0,
                     "default_value": "",
                     "placeholder": "",
@@ -67,14 +67,14 @@
                     "name": "content",
                     "type": "repeater",
                     "instructions": "Inneh\u00e5ll i h\u00f6gerkolumnen i sidfoten",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "show_in_rest": 0,
+                    "show_in_rest": 1,
                     "edit_in_rest": 0,
                     "collapsed": "",
                     "min": 0,

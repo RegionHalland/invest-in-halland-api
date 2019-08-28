@@ -11,7 +11,7 @@
             'name' => 'related_articles',
             'type' => 'repeater',
             'instructions' => '',
-            'required' => 0,
+            'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
                 'width' => '',
@@ -32,7 +32,7 @@
                     'name' => 'related_article',
                     'type' => 'post_object',
                     'instructions' => '',
-                    'required' => 0,
+                    'required' => 1,
                     'conditional_logic' => 0,
                     'wrapper' => array(
                         'width' => '',
@@ -68,6 +68,13 @@
                 'param' => 'post_type',
                 'operator' => '==',
                 'value' => 'company_story',
+            ),
+        ),
+        2 => array(
+            0 => array(
+                'param' => 'post_type',
+                'operator' => '==',
+                'value' => 'fact',
             ),
         ),
     ),
