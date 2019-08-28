@@ -158,7 +158,8 @@ add_action('init', function() {
             'related_content' => 'group_5d5a90b0d7e12',
             'opportunities' => 'group_5d5ba16b6dfdd',
             'company_stories' => 'group_5d5ba7b55a803',
-            'introduction' => 'group_5d5e8cad5c856'
+            'introduction' => 'group_5d5e8cad5c856',
+            'contact_page' => 'group_5d651ddd98651'
         ));
         $acfExportManager->import();
     }
