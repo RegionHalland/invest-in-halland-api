@@ -437,6 +437,16 @@ add_action('acf/init', function() {
             'icon'              => 'editor-insertmore',
             'keywords'          => array( 'introduction' ),
         ));
+
+        acf_register_block(array(
+            'name'              => 'summary',
+            'title'             => __('Summering'),
+            'description'       => __('Summering i punktform'),
+            'render_template'   => 'template-parts/block/content-summary.php',
+            'category'          => 'formatting',
+            'icon'              => 'editor-insertmore',
+            'keywords'          => array( 'summary' ),
+        ));
 	}
 });
 
