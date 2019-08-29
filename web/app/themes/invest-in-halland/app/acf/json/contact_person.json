@@ -29,6 +29,27 @@
             "mime_types": ""
         },
         {
+            "key": "field_5d678fc8cb3aa",
+            "label": "Beskrivning av person",
+            "name": "about",
+            "type": "textarea",
+            "instructions": "Beskriv vad personen kan hj\u00e4lpa till med.\r\n\r\nT.ex. Kristine hj\u00e4lper f\u00f6retag att hitta lokaler och knyta kontakter. Hon har jobbat inom n\u00e4ringslivet i \u00f6ver 20 \u00e5r och vet vad det inneb\u00e4r f\u00f6r f\u00f6retag att etablera sig.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_5d5262ba6c49e",
             "label": "F\u00f6retag",
             "name": "company",

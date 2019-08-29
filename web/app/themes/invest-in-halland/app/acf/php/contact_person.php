@@ -32,6 +32,29 @@
             'mime_types' => '',
         ),
         1 => array(
+            'key' => 'field_5d678fc8cb3aa',
+            'label' => __('Beskrivning av person', 'investinhalland'),
+            'name' => 'about',
+            'type' => 'textarea',
+            'instructions' => __('Beskriv vad personen kan hjälpa till med.
+
+T.ex. Kristine hjälper företag att hitta lokaler och knyta kontakter. Hon har jobbat inom näringslivet i över 20 år och vet vad det innebär för företag att etablera sig.', 'investinhalland'),
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'show_in_rest' => 1,
+            'edit_in_rest' => 0,
+            'default_value' => '',
+            'placeholder' => '',
+            'maxlength' => '',
+            'rows' => '',
+            'new_lines' => '',
+        ),
+        2 => array(
             'key' => 'field_5d5262ba6c49e',
             'label' => __('Företag', 'investinhalland'),
             'name' => 'company',
@@ -52,7 +75,7 @@
             'append' => '',
             'maxlength' => '',
         ),
-        2 => array(
+        3 => array(
             'key' => 'field_5d5262d06c49f',
             'label' => __('E-post', 'investinhalland'),
             'name' => 'email',
@@ -73,7 +96,7 @@
             'append' => '',
             'maxlength' => '',
         ),
-        3 => array(
+        4 => array(
             'key' => 'field_5d5262ea6c4a0',
             'label' => __('Telefonnummer', 'investinhalland'),
             'name' => 'phone',
@@ -94,7 +117,7 @@
             'append' => '',
             'maxlength' => '',
         ),
-        4 => array(
+        5 => array(
             'key' => 'field_5d52631a6c4a1',
             'label' => __('LinkedIn', 'investinhalland'),
             'name' => 'linkedin',
