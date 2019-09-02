@@ -1,0 +1,113 @@
+<?php 
+
+if (function_exists('acf_add_local_field_group')) {
+    acf_add_local_field_group(array(
+    'key' => 'group_5d67dca6c2999',
+    'title' => __('Summering', 'investinhalland'),
+    'fields' => array(
+        0 => array(
+            'key' => 'field_5d67e217a3f0b',
+            'label' => __('Titel', 'investinhalland'),
+            'name' => 'title',
+            'type' => 'text',
+            'instructions' => __('Titel för hela summering, t.ex. "Om Raytelligence"', 'investinhalland'),
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'show_in_rest' => 1,
+            'edit_in_rest' => 0,
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'maxlength' => '',
+        ),
+        1 => array(
+            'key' => 'field_5d67dccc118fc',
+            'label' => __('Summering', 'investinhalland'),
+            'name' => 'summary',
+            'type' => 'repeater',
+            'instructions' => '',
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'show_in_rest' => 1,
+            'edit_in_rest' => 0,
+            'collapsed' => '',
+            'min' => 0,
+            'max' => 0,
+            'layout' => 'table',
+            'button_label' => '',
+            'sub_fields' => array(
+                0 => array(
+                    'key' => 'field_5d67dce6118fd',
+                    'label' => __('Titel', 'investinhalland'),
+                    'name' => 'title',
+                    'type' => 'text',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'show_in_rest' => 0,
+                    'edit_in_rest' => 0,
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => '',
+                ),
+                1 => array(
+                    'key' => 'field_5d67dcee118fe',
+                    'label' => __('Svar', 'investinhalland'),
+                    'name' => 'answer',
+                    'type' => 'textarea',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'show_in_rest' => 0,
+                    'edit_in_rest' => 0,
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'maxlength' => '',
+                    'rows' => 4,
+                    'new_lines' => '',
+                ),
+            ),
+        ),
+    ),
+    'location' => array(
+        0 => array(
+            0 => array(
+                'param' => 'block',
+                'operator' => '==',
+                'value' => 'acf/summary',
+            ),
+        ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => 'Fält för faktarutan som visas i artiklar.',
+));
+}
