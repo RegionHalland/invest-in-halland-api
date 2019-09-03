@@ -7,7 +7,7 @@
             "label": "Titel",
             "name": "title",
             "type": "text",
-            "instructions": "Titel f\u00f6r hela summering, t.ex. \"Om Raytelligence\"",
+            "instructions": "Titel f\u00f6r hela summeringen, t.ex. \"Om Raytelligence\"",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -24,12 +24,12 @@
             "maxlength": ""
         },
         {
-            "key": "field_5d67dccc118fc",
-            "label": "Summering",
-            "name": "summary",
-            "type": "repeater",
-            "instructions": "",
-            "required": 1,
+            "key": "field_5d67dce6118fd",
+            "label": "Fr\u00e5ga",
+            "name": "question_1",
+            "type": "text",
+            "instructions": "T.ex. \"Bransch\"",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -38,55 +38,158 @@
             },
             "show_in_rest": 1,
             "edit_in_rest": 0,
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
-            "sub_fields": [
-                {
-                    "key": "field_5d67dce6118fd",
-                    "label": "Titel",
-                    "name": "title",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "show_in_rest": 0,
-                    "edit_in_rest": 0,
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5d67dcee118fe",
-                    "label": "Svar",
-                    "name": "answer",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "show_in_rest": 0,
-                    "edit_in_rest": 0,
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 4,
-                    "new_lines": ""
-                }
-            ]
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d6e2e004d7cb",
+            "label": "Svar",
+            "name": "answer_1",
+            "type": "textarea",
+            "instructions": "T.ex. \"H\u00e4lsoteknik\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5d6e2d0e4d7c7",
+            "label": "Fr\u00e5ga",
+            "name": "question_2",
+            "type": "text",
+            "instructions": "T.ex. \"Bransch\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d6e2e004d7ca",
+            "label": "Svar",
+            "name": "answer_2",
+            "type": "textarea",
+            "instructions": "T.ex. \"H\u00e4lsoteknik\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5d6e2d0e4d7c6",
+            "label": "Fr\u00e5ga",
+            "name": "question_3",
+            "type": "text",
+            "instructions": "T.ex. \"Bransch\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d6e2dff4d7c9",
+            "label": "Svar",
+            "name": "answer_3",
+            "type": "textarea",
+            "instructions": "T.ex. \"H\u00e4lsoteknik\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5d6e2d0d4d7c5",
+            "label": "Fr\u00e5ga",
+            "name": "question_4",
+            "type": "text",
+            "instructions": "T.ex. \"Bransch\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d6e2cbf6253a",
+            "label": "Svar",
+            "name": "answer_4",
+            "type": "textarea",
+            "instructions": "T.ex. \"H\u00e4lsoteknik\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
         }
     ],
     "location": [

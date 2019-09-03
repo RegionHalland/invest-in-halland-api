@@ -4,15 +4,35 @@
  */
 
 // create id attribute for specific styling
-$id = 'summary-' . $block['id'];
+
+// TODO:
+// GraphQL queries prevents us from using a repeater here, but maybe in the future.
+// Manually create an array of question and answers for now.
+$amountOfQuestions = 4;
+$fields = [];
 $title = get_field('title');
-$fields = get_field('summary');
+$id = 'summary-' . $block['id'];
+
+for ($i = 1; $i <= $amountOfQuestions; $i++) {
+	$fields[] = [
+		'question' => get_field('question_' . $i),
+		'answer' => get_field('answer_' . $i)
+	];
+}
 ?>
 
 <div id="<?php echo $id; ?>" class="summary">
 	<h2 class="summary-heading"><?php echo $title; ?></h2>
 	<?php foreach ($fields as $field) {
-		echo '<div class="summary-container"><span class="summary-title">' . $field['title'] . '</span><span class="summary-answer">' . $field['answer'] . '</span></div>';
+		echo '<div class="summary-container">';
+		if ($field['question'] !== null) {
+			echo '<span class="summary-title">' . $field['question'] . '</span>';
+		};
+
+		if ($field['answer'] !== null) {
+			echo '<span class="summary-answer">' . $field['answer'] . '</span>';
+		};
+		echo '</div>';
 	};
 	?>
 	</div>
