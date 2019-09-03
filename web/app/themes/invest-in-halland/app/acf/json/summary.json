@@ -5,7 +5,7 @@
         {
             "key": "field_5d67e217a3f0b",
             "label": "Titel",
-            "name": "title",
+            "name": "summary_title",
             "type": "text",
             "instructions": "Titel f\u00f6r hela summeringen, t.ex. \"Om Raytelligence\"",
             "required": 1,
@@ -26,13 +26,13 @@
         {
             "key": "field_5d67dce6118fd",
             "label": "Fr\u00e5ga",
-            "name": "question_1",
+            "name": "summary_question_1",
             "type": "text",
             "instructions": "T.ex. \"Bransch\"",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "40",
                 "class": "",
                 "id": ""
             },
@@ -47,13 +47,13 @@
         {
             "key": "field_5d6e2e004d7cb",
             "label": "Svar",
-            "name": "answer_1",
+            "name": "summary_answer_1",
             "type": "textarea",
             "instructions": "T.ex. \"H\u00e4lsoteknik\"",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "60",
                 "class": "",
                 "id": ""
             },
@@ -68,13 +68,13 @@
         {
             "key": "field_5d6e2d0e4d7c7",
             "label": "Fr\u00e5ga",
-            "name": "question_2",
+            "name": "summary_question_2",
             "type": "text",
             "instructions": "T.ex. \"Bransch\"",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "40",
                 "class": "",
                 "id": ""
             },
@@ -89,13 +89,13 @@
         {
             "key": "field_5d6e2e004d7ca",
             "label": "Svar",
-            "name": "answer_2",
+            "name": "summary_answer_2",
             "type": "textarea",
             "instructions": "T.ex. \"H\u00e4lsoteknik\"",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "60",
                 "class": "",
                 "id": ""
             },
@@ -110,13 +110,13 @@
         {
             "key": "field_5d6e2d0e4d7c6",
             "label": "Fr\u00e5ga",
-            "name": "question_3",
+            "name": "summary_question_3",
             "type": "text",
             "instructions": "T.ex. \"Bransch\"",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "40",
                 "class": "",
                 "id": ""
             },
@@ -131,13 +131,13 @@
         {
             "key": "field_5d6e2dff4d7c9",
             "label": "Svar",
-            "name": "answer_3",
+            "name": "summary_answer_3",
             "type": "textarea",
             "instructions": "T.ex. \"H\u00e4lsoteknik\"",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "60",
                 "class": "",
                 "id": ""
             },
@@ -152,13 +152,13 @@
         {
             "key": "field_5d6e2d0d4d7c5",
             "label": "Fr\u00e5ga",
-            "name": "question_4",
+            "name": "summary_question_4",
             "type": "text",
             "instructions": "T.ex. \"Bransch\"",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "40",
                 "class": "",
                 "id": ""
             },
@@ -173,13 +173,13 @@
         {
             "key": "field_5d6e2cbf6253a",
             "label": "Svar",
-            "name": "answer_4",
+            "name": "summary_answer_4",
             "type": "textarea",
             "instructions": "T.ex. \"H\u00e4lsoteknik\"",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "60",
                 "class": "",
                 "id": ""
             },

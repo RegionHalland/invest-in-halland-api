@@ -10,13 +10,13 @@
 // Manually create an array of question and answers for now.
 $amountOfQuestions = 4;
 $fields = [];
-$title = get_field('title');
+$title = get_field('summary_title');
 $id = 'summary-' . $block['id'];
 
 for ($i = 1; $i <= $amountOfQuestions; $i++) {
 	$fields[] = [
-		'question' => get_field('question_' . $i),
-		'answer' => get_field('answer_' . $i)
+		'question' => get_field('summary_question_' . $i),
+		'answer' => get_field('summary_answer_' . $i)
 	];
 }
 ?>
