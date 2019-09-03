@@ -154,12 +154,12 @@ add_action('init', function() {
             'responsible_contact' => 'group_5d517bb2d658f',
             'contact_person' => 'group_5d5262b5eac61',
             'fact' => 'group_5d1ca39e510b8',
-            'company_fact' => 'group_5d514df253be6',
             'related_content' => 'group_5d5a90b0d7e12',
             'opportunities' => 'group_5d5ba16b6dfdd',
             'company_stories' => 'group_5d5ba7b55a803',
             'introduction' => 'group_5d5e8cad5c856',
-            'contact_page' => 'group_5d651ddd98651'
+            'contact_page' => 'group_5d651ddd98651',
+            'summary' => 'group_5d67dca6c2999',
         ));
         $acfExportManager->import();
     }
@@ -437,6 +437,16 @@ add_action('acf/init', function() {
             'icon'              => 'editor-insertmore',
             'keywords'          => array( 'introduction' ),
         ));
+
+        acf_register_block(array(
+            'name'              => 'summary',
+            'title'             => __('Summering'),
+            'description'       => __('Summering i punktform'),
+            'render_template'   => 'template-parts/block/content-summary.php',
+            'category'          => 'formatting',
+            'icon'              => 'editor-insertmore',
+            'keywords'          => array( 'summary' ),
+        ));
 	}
 });
 
@@ -458,6 +468,7 @@ add_action(
 
 		// Surface all Gutenberg blocks in the WordPress REST API
 		$post_types = get_post_types_by_support( [ 'editor' ] );
+
 		foreach ( $post_types as $post_type ) {
 			if ( use_block_editor_for_post_type( $post_type ) ) {
 				register_rest_field(

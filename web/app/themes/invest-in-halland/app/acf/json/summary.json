@@ -1,0 +1,213 @@
+[{
+    "key": "group_5d67dca6c2999",
+    "title": "Summering",
+    "fields": [
+        {
+            "key": "field_5d67e217a3f0b",
+            "label": "Titel",
+            "name": "summary_title",
+            "type": "text",
+            "instructions": "Titel f\u00f6r hela summeringen, t.ex. \"Om Raytelligence\"",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d67dce6118fd",
+            "label": "Fr\u00e5ga",
+            "name": "summary_question_1",
+            "type": "text",
+            "instructions": "T.ex. \"Bransch\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d6e2e004d7cb",
+            "label": "Svar",
+            "name": "summary_answer_1",
+            "type": "textarea",
+            "instructions": "T.ex. \"H\u00e4lsoteknik\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5d6e2d0e4d7c7",
+            "label": "Fr\u00e5ga",
+            "name": "summary_question_2",
+            "type": "text",
+            "instructions": "T.ex. \"Bransch\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d6e2e004d7ca",
+            "label": "Svar",
+            "name": "summary_answer_2",
+            "type": "textarea",
+            "instructions": "T.ex. \"H\u00e4lsoteknik\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5d6e2d0e4d7c6",
+            "label": "Fr\u00e5ga",
+            "name": "summary_question_3",
+            "type": "text",
+            "instructions": "T.ex. \"Bransch\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d6e2dff4d7c9",
+            "label": "Svar",
+            "name": "summary_answer_3",
+            "type": "textarea",
+            "instructions": "T.ex. \"H\u00e4lsoteknik\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5d6e2d0d4d7c5",
+            "label": "Fr\u00e5ga",
+            "name": "summary_question_4",
+            "type": "text",
+            "instructions": "T.ex. \"Bransch\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d6e2cbf6253a",
+            "label": "Svar",
+            "name": "summary_answer_4",
+            "type": "textarea",
+            "instructions": "T.ex. \"H\u00e4lsoteknik\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "edit_in_rest": 0,
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/summary"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "F\u00e4lt f\u00f6r faktarutan som visas i artiklar."
+}]
+
