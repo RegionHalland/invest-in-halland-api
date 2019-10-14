@@ -32,29 +32,6 @@
             'mime_types' => '',
         ),
         1 => array(
-            'key' => 'field_5d678fc8cb3aa',
-            'label' => __('Beskrivning av person', 'investinhalland'),
-            'name' => 'about',
-            'type' => 'textarea',
-            'instructions' => __('Beskriv vad personen kan hjälpa till med.
-
-T.ex. Kristine hjälper företag att hitta lokaler och knyta kontakter. Hon har jobbat inom näringslivet i över 20 år och vet vad det innebär för företag att etablera sig.', 'investinhalland'),
-            'required' => 1,
-            'conditional_logic' => 0,
-            'wrapper' => array(
-                'width' => '',
-                'class' => '',
-                'id' => '',
-            ),
-            'show_in_rest' => 1,
-            'edit_in_rest' => 0,
-            'default_value' => '',
-            'placeholder' => '',
-            'maxlength' => '',
-            'rows' => '',
-            'new_lines' => '',
-        ),
-        2 => array(
             'key' => 'field_5d5262ba6c49e',
             'label' => __('Företag', 'investinhalland'),
             'name' => 'company',
@@ -75,7 +52,7 @@ T.ex. Kristine hjälper företag att hitta lokaler och knyta kontakter. Hon har 
             'append' => '',
             'maxlength' => '',
         ),
-        3 => array(
+        2 => array(
             'key' => 'field_5d5262d06c49f',
             'label' => __('E-post', 'investinhalland'),
             'name' => 'email',
@@ -96,7 +73,7 @@ T.ex. Kristine hjälper företag att hitta lokaler och knyta kontakter. Hon har 
             'append' => '',
             'maxlength' => '',
         ),
-        4 => array(
+        3 => array(
             'key' => 'field_5d5262ea6c4a0',
             'label' => __('Telefonnummer', 'investinhalland'),
             'name' => 'phone',
@@ -117,7 +94,7 @@ T.ex. Kristine hjälper företag att hitta lokaler och knyta kontakter. Hon har 
             'append' => '',
             'maxlength' => '',
         ),
-        5 => array(
+        4 => array(
             'key' => 'field_5d52631a6c4a1',
             'label' => __('LinkedIn', 'investinhalland'),
             'name' => 'linkedin',
@@ -134,6 +111,27 @@ T.ex. Kristine hjälper företag att hitta lokaler och knyta kontakter. Hon har 
             'edit_in_rest' => 0,
             'default_value' => '',
             'placeholder' => '',
+        ),
+        5 => array(
+            'key' => 'field_5da486637314e',
+            'label' => __('Visa på kontaktsida', 'investinhalland'),
+            'name' => 'show_on_contact_page',
+            'type' => 'true_false',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'show_in_rest' => 1,
+            'edit_in_rest' => 0,
+            'message' => __('Visa person på kontaktsida', 'investinhalland'),
+            'default_value' => 0,
+            'ui' => 0,
+            'ui_on_text' => '',
+            'ui_off_text' => '',
         ),
     ),
     'location' => array(
