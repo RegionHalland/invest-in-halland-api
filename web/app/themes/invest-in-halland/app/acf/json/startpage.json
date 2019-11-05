@@ -39,10 +39,31 @@
                 },
                 {
                     "key": "field_5d63d46009bf1",
-                    "label": "Rubrik",
-                    "name": "title",
+                    "label": "Rubrik (\u00d6ver)",
+                    "name": "header_title_top",
                     "type": "text",
-                    "instructions": "Text som visas innan orden som v\u00e4xlas. T.ex. Nothing but",
+                    "instructions": "Text som visas \u00f6verst, t.ex. \"Nothing but\"",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 1,
+                    "edit_in_rest": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5dc14313d23a2",
+                    "label": "Rubrik (Under)",
+                    "name": "header_title_bottom",
+                    "type": "text",
+                    "instructions": "Text som visas unders, t.ex. \"opportunities\"",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -60,10 +81,10 @@
                 },
                 {
                     "key": "field_5d63d49c09bf2",
-                    "label": "V\u00e4xlande ord",
-                    "name": "words",
+                    "label": "V\u00e4xlande bilder",
+                    "name": "header_images",
                     "type": "repeater",
-                    "instructions": "Alla ord som ska v\u00e4xlas runt.",
+                    "instructions": "Bilder som ska v\u00e4xlas runt i sidhuvudet",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -79,27 +100,6 @@
                     "layout": "table",
                     "button_label": "",
                     "sub_fields": [
-                        {
-                            "key": "field_5d63d4d009bf3",
-                            "label": "Ord",
-                            "name": "word",
-                            "type": "text",
-                            "instructions": "T.ex. opportunities",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "show_in_rest": 1,
-                            "edit_in_rest": 0,
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
                         {
                             "key": "field_5d77ae0db620e",
                             "label": "Bild",
