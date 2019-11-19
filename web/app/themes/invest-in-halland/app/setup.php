@@ -160,7 +160,8 @@ add_action('init', function() {
             'introduction' => 'group_5d5e8cad5c856',
             'contact_page' => 'group_5d651ddd98651',
             'summary' => 'group_5d67dca6c2999',
-            'cookie_notice' => 'group_5d77857dbeaf1'
+            'cookie_notice' => 'group_5d77857dbeaf1',
+            'fomo' => 'group_5dd3c3707d37a'
         ));
         $acfExportManager->import();
     }
@@ -531,9 +532,16 @@ if (function_exists('acf_add_options_page')) {
         'parent_slug'   => 'theme-general',
     ));
 
-     acf_add_options_sub_page(array(
+    acf_add_options_sub_page(array(
         'page_title'    => 'Cookies',
         'menu_title'    => 'Cookies',
+        'parent_slug'   => 'theme-general',
+    ));
+
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Notiser',
+        'menu_title'    => 'Notiser',
         'parent_slug'   => 'theme-general',
     ));
 }
