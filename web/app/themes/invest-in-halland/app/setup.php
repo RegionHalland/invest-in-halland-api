@@ -607,6 +607,7 @@ add_filter('acf/format_value/type=relationship', function ( $value, $post_id, $f
         $post->title = $post->post_title;
 
         $post->contact = get_field('contact', $post->ID) ? get_field('contact', $post->ID) : null;
+        $post->highlight = get_field('highlight', $post->ID) ? get_field('highlight', $post->ID) : null;
     }
 
 	return $value;
