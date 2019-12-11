@@ -161,7 +161,8 @@ add_action('init', function() {
             'contact_page' => 'group_5d651ddd98651',
             'summary' => 'group_5d67dca6c2999',
             'cookie_notice' => 'group_5d77857dbeaf1',
-            'fomo' => 'group_5dd3c3707d37a'
+            'fomo' => 'group_5dd3c3707d37a',
+            'title_highlight' => 'group_5df0c72d0cfa3',
         ));
         $acfExportManager->import();
     }
