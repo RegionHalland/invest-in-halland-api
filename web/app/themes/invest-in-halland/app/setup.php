@@ -609,6 +609,7 @@ add_filter('acf/format_value/type=relationship', function ( $value, $post_id, $f
 
         $post->contact = get_field('contact', $post->ID) ? get_field('contact', $post->ID) : null;
         $post->highlight = get_field('highlight', $post->ID) ? get_field('highlight', $post->ID) : null;
+        $post->fact_chart = get_field('fact_chart', $post->ID) ? get_field('fact_chart', $post->ID) : null;
     }
 
 	return $value;
