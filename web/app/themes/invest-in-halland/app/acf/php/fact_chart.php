@@ -11,14 +11,14 @@
             'name' => 'fact_chart',
             'type' => 'select',
             'instructions' => __('Välj vilken typ av diagram som ska visas i bakgrunden av faktakortet', 'investinhalland'),
-            'required' => 0,
+            'required' => 1,
             'conditional_logic' => 0,
             'wrapper' => array(
                 'width' => '',
                 'class' => '',
                 'id' => '',
             ),
-            'show_in_rest' => 0,
+            'show_in_rest' => 1,
             'edit_in_rest' => 0,
             'choices' => array(
                 'circle' => __('Cirkeldiagram', 'investinhalland'),
