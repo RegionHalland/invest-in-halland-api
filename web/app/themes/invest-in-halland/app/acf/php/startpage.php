@@ -83,11 +83,11 @@
                     'maxlength' => '',
                 ),
                 3 => array(
-                    'key' => 'field_5d63d49c09bf2',
-                    'label' => __('Växlande bilder', 'investinhalland'),
-                    'name' => 'header_images',
-                    'type' => 'repeater',
-                    'instructions' => __('Bilder som ska växlas runt i sidhuvudet', 'investinhalland'),
+                    'key' => 'field_5e1daac0f9d67',
+                    'label' => __('Bild 1', 'investinhalland'),
+                    'name' => 'image_1',
+                    'type' => 'image',
+                    'instructions' => '',
                     'required' => 1,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -97,41 +97,44 @@
                     ),
                     'show_in_rest' => 1,
                     'edit_in_rest' => 0,
-                    'collapsed' => '',
-                    'min' => 0,
-                    'max' => 0,
-                    'layout' => 'table',
-                    'button_label' => '',
-                    'sub_fields' => array(
-                        0 => array(
-                            'key' => 'field_5d77ae0db620e',
-                            'label' => __('Bild', 'investinhalland'),
-                            'name' => 'image',
-                            'type' => 'image',
-                            'instructions' => '',
-                            'required' => 1,
-                            'conditional_logic' => 0,
-                            'wrapper' => array(
-                                'width' => '',
-                                'class' => '',
-                                'id' => '',
-                            ),
-                            'show_in_rest' => 1,
-                            'edit_in_rest' => 0,
-                            'return_format' => 'array',
-                            'preview_size' => 'medium',
-                            'library' => 'all',
-                            'min_width' => '',
-                            'min_height' => '',
-                            'min_size' => '',
-                            'max_width' => '',
-                            'max_height' => '',
-                            'max_size' => '',
-                            'mime_types' => '',
-                        ),
-                    ),
+                    'return_format' => 'array',
+                    'preview_size' => 'medium',
+                    'library' => 'all',
+                    'min_width' => '',
+                    'min_height' => '',
+                    'min_size' => '',
+                    'max_width' => '',
+                    'max_height' => '',
+                    'max_size' => '',
+                    'mime_types' => '',
                 ),
                 4 => array(
+                    'key' => 'field_5e1daae8f9d68',
+                    'label' => __('Bild 2', 'investinhalland'),
+                    'name' => 'image_2',
+                    'type' => 'image',
+                    'instructions' => '',
+                    'required' => 1,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'show_in_rest' => 1,
+                    'edit_in_rest' => 0,
+                    'return_format' => 'array',
+                    'preview_size' => 'medium',
+                    'library' => 'all',
+                    'min_width' => '',
+                    'min_height' => '',
+                    'min_size' => '',
+                    'max_width' => '',
+                    'max_height' => '',
+                    'max_size' => '',
+                    'mime_types' => '',
+                ),
+                5 => array(
                     'key' => 'field_5dc015bfa5de6',
                     'label' => __('Utvalda artiklar', 'investinhalland'),
                     'name' => '',
@@ -149,7 +152,7 @@
                     'placement' => 'top',
                     'endpoint' => 0,
                 ),
-                5 => array(
+                6 => array(
                     'key' => 'field_5dbffedf05f8d',
                     'label' => __('Rubrik', 'investinhalland'),
                     'name' => 'featured_articles_title',
@@ -170,7 +173,7 @@
                     'append' => '',
                     'maxlength' => '',
                 ),
-                6 => array(
+                7 => array(
                     'key' => 'field_5d63d4fd58ce9',
                     'label' => __('Inledande text', 'investinhalland'),
                     'name' => 'featured_articles_introduction_text',
@@ -191,7 +194,7 @@
                     'media_upload' => 0,
                     'delay' => 0,
                 ),
-                7 => array(
+                8 => array(
                     'key' => 'field_5d63d53658cea',
                     'label' => __('Utvalda artiklar', 'investinhalland'),
                     'name' => 'featured_articles',
@@ -221,7 +224,7 @@
                     'max' => '',
                     'return_format' => 'object',
                 ),
-                8 => array(
+                9 => array(
                     'key' => 'field_5dc01618a5de7',
                     'label' => __('Möt företagarna', 'investinhalland'),
                     'name' => '',
@@ -239,7 +242,7 @@
                     'placement' => 'top',
                     'endpoint' => 0,
                 ),
-                9 => array(
+                10 => array(
                     'key' => 'field_5dc01673a5de8',
                     'label' => __('Rubrik', 'investinhalland'),
                     'name' => 'featured_companies_title',
@@ -260,7 +263,7 @@
                     'append' => '',
                     'maxlength' => '',
                 ),
-                10 => array(
+                11 => array(
                     'key' => 'field_5dc0169aa5de9',
                     'label' => __('Inledande text', 'investinhalland'),
                     'name' => 'featured_companies_introduction_text',
@@ -281,7 +284,7 @@
                     'media_upload' => 0,
                     'delay' => 0,
                 ),
-                11 => array(
+                12 => array(
                     'key' => 'field_5dc016bda5dea',
                     'label' => __('Utvalda artiklar', 'investinhalland'),
                     'name' => 'featured_companies',
