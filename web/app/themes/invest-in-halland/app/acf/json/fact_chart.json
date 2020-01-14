@@ -8,14 +8,14 @@
             "name": "fact_chart",
             "type": "select",
             "instructions": "V\u00e4lj vilken typ av diagram som ska visas i bakgrunden av faktakortet",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "show_in_rest": 0,
+            "show_in_rest": 1,
             "edit_in_rest": 0,
             "choices": {
                 "circle": "Cirkeldiagram",
