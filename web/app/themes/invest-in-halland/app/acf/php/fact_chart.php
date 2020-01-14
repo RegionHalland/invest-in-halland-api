@@ -44,6 +44,20 @@
                 'value' => 'fact',
             ),
         ),
+        1 => array(
+            0 => array(
+                'param' => 'post_type',
+                'operator' => '==',
+                'value' => 'company_story',
+            ),
+        ),
+        2 => array(
+            0 => array(
+                'param' => 'post_type',
+                'operator' => '==',
+                'value' => 'opportunity',
+            ),
+        ),
     ),
     'menu_order' => 0,
     'position' => 'normal',
