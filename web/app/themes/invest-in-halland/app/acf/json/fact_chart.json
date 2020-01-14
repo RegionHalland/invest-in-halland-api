@@ -1,0 +1,54 @@
+[{
+    "key": "group_5e1d8a76d2eb9",
+    "title": "Faktabakgrund",
+    "fields": [
+        {
+            "key": "field_5e1d8a95d543b",
+            "label": "Faktabakgrund",
+            "name": "fact_chart",
+            "type": "select",
+            "instructions": "V\u00e4lj vilken typ av diagram som ska visas i bakgrunden av faktakortet",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 0,
+            "edit_in_rest": 0,
+            "choices": {
+                "circle": "Cirkeldiagram",
+                "bar": "Stapeldiagram",
+                "line": "Linjediagram"
+            },
+            "default_value": [
+                "circle"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "fact"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "F\u00e4lt f\u00f6r att v\u00e4lja bakgrundsdiagram till en faktaruta"
+}]
+
