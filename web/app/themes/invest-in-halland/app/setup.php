@@ -163,6 +163,7 @@ add_action('init', function() {
             'cookie_notice' => 'group_5d77857dbeaf1',
             'fomo' => 'group_5dd3c3707d37a',
             'title_highlight' => 'group_5df0c72d0cfa3',
+            'fact_chart' => 'group_5e1d8a76d2eb9'
         ));
         $acfExportManager->import();
     }
