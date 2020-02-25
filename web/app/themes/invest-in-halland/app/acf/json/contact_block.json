@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "show_in_rest": 0,
+            "show_in_rest": 1,
             "edit_in_rest": 0,
             "default_value": "",
             "placeholder": "",
@@ -27,7 +27,7 @@
             "key": "field_5e54e6ae56902",
             "label": "Kontaktperson",
             "name": "contact_relationship",
-            "type": "relationship",
+            "type": "post_object",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -36,21 +36,16 @@
                 "class": "",
                 "id": ""
             },
-            "show_in_rest": 0,
+            "show_in_rest": 1,
             "edit_in_rest": 0,
             "post_type": [
                 "contact"
             ],
             "taxonomy": "",
-            "filters": [
-                "search",
-                "post_type",
-                "taxonomy"
-            ],
-            "elements": "",
-            "min": 1,
-            "max": 1,
-            "return_format": "object"
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
         },
         {
             "key": "field_5e54e708ce77a",
@@ -65,7 +60,7 @@
                 "class": "",
                 "id": ""
             },
-            "show_in_rest": 0,
+            "show_in_rest": 1,
             "edit_in_rest": 0,
             "layout": "block",
             "sub_fields": [
@@ -82,7 +77,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "show_in_rest": 0,
+                    "show_in_rest": 1,
                     "edit_in_rest": 0,
                     "default_value": "",
                     "placeholder": ""
@@ -100,7 +95,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "show_in_rest": 0,
+                    "show_in_rest": 1,
                     "edit_in_rest": 0,
                     "default_value": "",
                     "placeholder": "",
@@ -123,7 +118,7 @@
                 "class": "",
                 "id": ""
             },
-            "show_in_rest": 0,
+            "show_in_rest": 1,
             "edit_in_rest": 0,
             "layout": "block",
             "sub_fields": [
@@ -140,7 +135,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "show_in_rest": 0,
+                    "show_in_rest": 1,
                     "edit_in_rest": 0,
                     "default_value": "",
                     "placeholder": ""
@@ -158,7 +153,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "show_in_rest": 0,
+                    "show_in_rest": 1,
                     "edit_in_rest": 0,
                     "default_value": "",
                     "placeholder": "",
